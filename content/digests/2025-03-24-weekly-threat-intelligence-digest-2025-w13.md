@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W13"
 date: 2025-03-30T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 5 CVEs. 2 critical."
+description: "Weekly security intelligence digest covering 2 items, 7 CVEs. 2 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -28,6 +28,17 @@ Four critical vulnerabilities in the Kubernetes ingress-nginx controller, collec
 A critical authentication bypass in CrushFTP allows unauthenticated attackers to access administrative functions through crafted HTTP requests, with exploitation already observed in the wild. (CVE-2025-2825) Affected: CrushFTP versions prior to 10.8.4 and 11.3.1.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### 1. **Critical vulnerability CVE-2025-2359**
+A vulnerability classified as critical has been found in D-Link DIR-823G 1.0.2B05_20181207. Affected is the function SetDDNSSettings of the file /HNAP1/ of the component DDNS Service. The manipulat...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
+### 2. **Critical vulnerability CVE-2025-2360**
+A vulnerability classified as critical was found in D-Link DIR-823G 1.0.2B05_20181207. Affected by this vulnerability is the function SetUpnpSettings of the file /HNAP1/ of the component UPnP Servi...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

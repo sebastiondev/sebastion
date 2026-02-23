@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W49"
 date: 2025-12-07T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 1 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 3 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 Another critical zero-day in Ivanti Connect Secure VPN appliances is being mass-exploited to deploy custom malware, with CISA issuing an emergency directive requiring federal agencies to disconnect affected devices. (CVE-2025-47801) Affected: Ivanti Connect Secure, Ivanti Policy Secure.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-13578
+- **What happened**: A vulnerability has been found in code-projects Library System 1.0. This affects an unknown function of the file /index.php of the component Login. The manipulation of the argument Username leads t...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-13582
+- **What happened**: A security flaw has been discovered in code-projects Jonnys Liquor 1.0. Affected by this issue is some unknown functionality of the file /detail.php of the component GET Parameter Handler. Performi...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

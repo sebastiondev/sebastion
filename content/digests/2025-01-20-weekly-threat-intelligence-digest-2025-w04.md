@@ -2,17 +2,17 @@
 title: "Weekly threat intelligence digest — 2025-W04"
 date: 2025-01-26T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 0 CVEs. 1 high, 1 informational."
+description: "Weekly security intelligence digest covering 2 items, 2 CVEs. 1 high, 1 informational."
 tags: [campaign, policy, threat-intelligence, weekly-digest]
 series: "Weekly Digest"
 ---
 
 # Weekly Threat Intelligence Digest: 2025-W04 (January 20 - January 26)
 
-## executive summary
+## Executive summary
 This week, the cybersecurity landscape saw a significant uptick in activity from the Mirai botnet, which has shifted its focus to exploiting Juniper routers using default credentials. Meanwhile, CISA and the FBI released joint guidance aimed at mitigating buffer overflow vulnerabilities through better software development practices. With no new CVEs reported this week, the threat landscape remains dominated by persistent campaigns leveraging known weaknesses.
 
-## critical & high priority
+## Critical & high priority
 ### juniper routers targeted by mirai botnet campaign using default credentials
 - **What happened**: A variant of the Mirai botnet has been actively scanning and compromising Juniper SSR routers that still use factory-default credentials. Once infected, these devices are integrated into DDoS infrastructure.
 - **Who's affected**: Organizations relying on Juniper SSR routers with unpatched or misconfigured default credentials are at immediate risk.
@@ -20,6 +20,17 @@ This week, the cybersecurity landscape saw a significant uptick in activity from
   - Immediately change default credentials on all Juniper SSR routers.
   - Apply the latest firmware updates from Juniper Networks.
   - Monitor network traffic for signs of botnet activity, such as unusual bandwidth usage or unauthorized connections.
+
+### Critical vulnerability CVE-2025-22777
+- **What happened**: Deserialization of Untrusted Data vulnerability in GiveWP GiveWP allows Object Injection.This issue affects GiveWP: from n/a through 3.19.3.
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-22144
+- **What happened**: NamelessMC is a free, easy to use & powerful website software for Minecraft servers. A user with admincp.core.emails or admincp.users.edit permissions can validate users and an attacker can reset t...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## notable developments
 ### cisa and fbi release joint advisory on eliminating buffer overflow vulnerabilities

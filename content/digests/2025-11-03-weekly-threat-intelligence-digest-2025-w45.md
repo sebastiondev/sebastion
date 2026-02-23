@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W45"
 date: 2025-11-09T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 1 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 3 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 A critical zero-day vulnerability in Citrix NetScaler ADC and Gateway allows unauthenticated remote code execution, with threat actors injecting credential-harvesting JavaScript into login pages. (CVE-2025-44501) Affected: Citrix NetScaler ADC, Citrix NetScaler Gateway.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-12208
+- **What happened**: A vulnerability was found in SourceCodester Best House Rental Management System 1.0. This impacts the function login2 of the file /admin_class.php. Performing manipulation of the argument Username ...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-12210
+- **What happened**: A vulnerability was identified in Tenda O3 1.0.0.10(2478). Affected by this vulnerability is the function SetValue/GetValue of the file /goform/AdvSetLanip. The manipulation of the argument lanIp l...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

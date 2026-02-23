@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W24"
 date: 2025-06-15T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 3 CVEs. 1 critical, 1 high."
+description: "Weekly security intelligence digest covering 2 items, 5 CVEs. 1 critical, 1 high."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -28,6 +28,17 @@ A new critical SQL injection vulnerability in MOVEit Transfer is being exploited
 Microsoft's June Patch Tuesday addresses over 50 vulnerabilities including a Windows kernel privilege escalation flaw being exploited in the wild by advanced threat actors. (CVE-2025-29824, CVE-2025-33053) Affected: Microsoft Windows, Microsoft Office.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-5430
+- **What happened**: A vulnerability, which was classified as critical, has been found in AssamLook CMS 1.0. This issue affects some unknown processing of the file /product.php. The manipulation of the argument ID lead...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-5432
+- **What happened**: A vulnerability has been found in AssamLook CMS 1.0 and classified as critical. Affected by this vulnerability is an unknown functionality of the file /view_tender.php. The manipulation of the argu...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

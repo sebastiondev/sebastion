@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W28"
 date: 2025-07-13T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 2 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 4 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 Microsoft's July Patch Tuesday fixes over 60 vulnerabilities including a critical Hyper-V guest-to-host escape being exploited by nation-state actors for cloud infrastructure attacks. (CVE-2025-33654, CVE-2025-33671) Affected: Microsoft Windows, Microsoft Hyper-V, Azure.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-0634
+- **What happened**: Use After Free vulnerability in Samsung Open Source rLottie allows Remote Code Inclusion.This issue affects rLottie: V0.2.
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-53075
+- **What happened**: Improper Input Validation vulnerability in Samsung Open Source rLottie allows Path Traversal.This issue affects rLottie: V0.2.
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

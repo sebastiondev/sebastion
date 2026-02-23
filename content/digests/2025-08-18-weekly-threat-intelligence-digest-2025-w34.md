@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W34"
 date: 2025-08-24T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 0 CVEs. 1 critical, 1 high."
+description: "Weekly security intelligence digest covering 2 items, 2 CVEs. 1 critical, 1 high."
 tags: [campaign, supply-chain, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -28,6 +28,17 @@ US intelligence agencies released a joint advisory warning that Chinese state-sp
 A supply chain attack targeting a widely-used npm package injected cryptocurrency-stealing malware, affecting over 12 million weekly downloads before detection. Affected: npm ecosystem, Node.js developers.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-8854
+- **What happened**: Stack-based buffer overflow in LoadOFF in bulletphysics bullet3 before 3.26 on all platforms allows remote attackers to execute arbitrary code via a crafted OFF file with an overlong initial token ...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-8660
+- **What happened**: Privilege escalation occurs when a user gets access to more resources or functionality than they are normally allowed.
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

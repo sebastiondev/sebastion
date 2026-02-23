@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W52"
 date: 2025-12-28T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 1 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 3 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 A critical vulnerability in Apache Commons Text string interpolation is being mass-exploited at year's end, with attackers deploying cryptominers and ransomware through the widely-embedded Java library. (CVE-2025-49301) Affected: Apache Commons Text, Java applications.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### 1. **Critical vulnerability CVE-2025-67906**
+In MISP before 2.5.28, app/View/Elements/Workflows/executionPath.ctp allows XSS in the workflow execution path.
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
+### 2. **Critical vulnerability CVE-2025-14704**
+A vulnerability was found in Shiguangwu sgwbox N3 2.0.25. The impacted element is an unknown function of the file /eshell of the component API. The manipulation results in path traversal. It is pos...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

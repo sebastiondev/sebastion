@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W06"
 date: 2025-02-09T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 3 items, 4 CVEs. 2 high, 1 critical."
+description: "Weekly security intelligence digest covering 3 items, 6 CVEs. 2 high, 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -28,6 +28,17 @@ This week, active exploitation of high and critical vulnerabilities dominated th
 - **What happened**: Google addressed a high-severity USB-video class vulnerability (CVE-2024-53104) in Android, which was being exploited.
 - **Who's affected**: Users of Android devices relying on the Linux kernel are at risk if updates aren't applied.
 - **What to do**: Update devices promptly and monitor for any additional exploits.
+
+### Critical vulnerability CVE-2024-55227
+- **What happened**: A cross-site scripting (XSS) vulnerability in the Events/Agenda module of Dolibarr v21.0.0-beta allows attackers to execute arbitrary web scripts or HTMl via a crafted payload injected into the Tit...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2024-55228
+- **What happened**: A cross-site scripting (XSS) vulnerability in the Product module of Dolibarr v21.0.0-beta allows attackers to execute arbitrary web scripts or HTMl via a crafted payload injected into the Title par...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## notable developments
 This week saw no new CVEs tracked, but existing vulnerabilities remain critical. The focus should be on patching known issues rather than identifying new ones.

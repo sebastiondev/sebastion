@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W43"
 date: 2025-10-26T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 1 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 3 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 A critical vulnerability in Kubernetes kubelet allows attackers to escape container boundaries through crafted volume mount operations, potentially compromising the underlying node and all co-located containers. (CVE-2025-43012) Affected: Kubernetes kubelet, all major Kubernetes distributions.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### 1. **Critical vulnerability CVE-2025-36087**
+IBM Security Verify Access 10.0.0 through 10.0.9, 11.0.0, IBM Verify Identity Access Container 10.0.0 through 10.0.9, and 11.0.0, under certain configurations, contains hard-coded credentials, such...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
+### 2. **Critical vulnerability CVE-2025-11656**
+A weakness has been identified in ProjectsAndPrograms School Management System up to 6b6fae5426044f89c08d0dd101c7fa71f9042a59. This affects an unknown function of the file /assets/editNotes.php. Ex...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

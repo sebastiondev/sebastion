@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W29"
 date: 2025-07-20T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 1 CVEs. 1 critical, 1 high."
+description: "Weekly security intelligence digest covering 2 items, 3 CVEs. 1 critical, 1 high."
 tags: [campaign, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -28,6 +28,17 @@ A critical unauthenticated RCE vulnerability in FortiManager is being exploited 
 A major US health insurance provider confirmed a data breach affecting approximately 15 million current and former members, with stolen data including Social Security numbers, medical records, and financial information. Affected: US healthcare consumers, health insurance members.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-7100
+- **What happened**: A vulnerability was found in BoyunCMS up to 1.4.20 and classified as critical. Affected by this issue is some unknown functionality of the file /application/user/controller/Index.php. The manipulat...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-7101
+- **What happened**: A vulnerability was found in BoyunCMS up to 1.4.20. It has been classified as critical. This affects an unknown part of the file /install/install_ok.php of the component Configuration File Handler....
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

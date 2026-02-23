@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W16"
 date: 2025-04-20T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 1 CVEs. 1 critical, 1 medium."
+description: "Weekly security intelligence digest covering 2 items, 3 CVEs. 1 critical, 1 medium."
 tags: [campaign, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 2 intelligence items across 2 categories, with 1 criti
 A critical vulnerability in the Erlang/OTP SSH library allows unauthenticated remote code execution with a perfect CVSS 10.0 score, affecting any application using the built-in SSH server. (CVE-2025-32433) Affected: Erlang/OTP SSH server implementations, CouchDB, RabbitMQ.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### 1. **Critical vulnerability CVE-2025-3330**
+A vulnerability classified as critical was found in codeprojects Online Restaurant Management System 1.0. This vulnerability affects unknown code of the file /reservation_save.php. The manipulation...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
+### 2. **Critical vulnerability CVE-2025-3331**
+A vulnerability, which was classified as critical, has been found in codeprojects Online Restaurant Management System 1.0. This issue affects some unknown processing of the file /payment_save.php. ...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

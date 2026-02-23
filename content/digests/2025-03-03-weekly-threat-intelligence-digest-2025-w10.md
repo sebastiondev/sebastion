@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W10"
 date: 2025-03-09T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 3 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 5 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 Three VMware zero-day vulnerabilities in ESXi, Workstation, and Fusion are being actively exploited, enabling attackers to escape virtual machines and compromise hypervisors. (CVE-2025-22224, CVE-2025-22225, CVE-2025-22226) Affected: VMware ESXi, VMware Workstation, VMware Fusion.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### 1. **Critical vulnerability CVE-2025-1598**
+A vulnerability was found in SourceCodester Best Church Management Software 1.0. It has been declared as critical. Affected by this vulnerability is an unknown functionality of the file /admin/app/...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
+### 2. **Critical vulnerability CVE-2025-1599**
+A vulnerability was found in SourceCodester Best Church Management Software 1.0. It has been rated as problematic. Affected by this issue is some unknown functionality of the file /admin/app/profil...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

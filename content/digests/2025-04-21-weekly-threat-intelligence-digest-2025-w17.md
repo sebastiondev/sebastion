@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W17"
 date: 2025-04-27T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 1 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 3 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 A critical zero-day in SAP NetWeaver Visual Composer is being actively exploited to upload webshells to enterprise SAP servers, enabling full remote control of critical business systems. (CVE-2025-31324) Affected: SAP NetWeaver Application Server Java with Visual Composer.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### 1. **Critical vulnerability CVE-2025-3553**
+A vulnerability was found in phpshe 1.8. It has been declared as critical. This vulnerability affects the function pe_delete of the file /admin.php?mod=brand&act=del. The manipulation of the argume...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
+### 2. **Critical vulnerability CVE-2025-3558**
+A vulnerability, which was classified as critical, was found in ghostxbh uzy-ssm-mall 1.0.0. This affects an unknown part of the file /mall/user/uploadUserHeadImage. The manipulation of the argumen...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

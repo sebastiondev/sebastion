@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2026-W05"
 date: 2026-02-01T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 1 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 3 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 Juniper Networks released emergency patches for a critical out-of-bounds write vulnerability in Junos OS that enables unauthenticated remote code execution on MX and SRX series devices. (CVE-2026-0180) Affected: Juniper MX Series, Juniper SRX Series.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2026-1129
+- **What happened**: A vulnerability was detected in Yonyou KSOA 9.0. This vulnerability affects unknown code of the file /worksheet/worksadd.jsp of the component HTTP GET Parameter Handler. The manipulation of the arg...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2026-1130
+- **What happened**: A flaw has been found in Yonyou KSOA 9.0. This issue affects some unknown processing of the file /worksheet/worksadd_plan.jsp of the component HTTP GET Parameter Handler. This manipulation of the a...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

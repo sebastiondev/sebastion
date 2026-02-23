@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W14"
 date: 2025-04-06T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 0 CVEs. 1 high."
+description: "Weekly security intelligence digest covering 1 items, 2 CVEs. 1 high."
 tags: [campaign, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 Threat actors maintained persistent read-only access to Fortinet FortiGate devices through symlinks in the SSL-VPN language files, surviving firmware updates and patches applied by defenders. Affected: Fortinet FortiGate devices with SSL-VPN enabled.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### 1. **Critical vulnerability CVE-2025-2674**
+A vulnerability classified as critical was found in PHPGurukul Bank Locker Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /aboutus.php. The manipulati...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
+### 2. **Critical vulnerability CVE-2025-2675**
+A vulnerability, which was classified as critical, has been found in PHPGurukul Bank Locker Management System 1.0. Affected by this issue is some unknown functionality of the file /add-lockertype.p...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

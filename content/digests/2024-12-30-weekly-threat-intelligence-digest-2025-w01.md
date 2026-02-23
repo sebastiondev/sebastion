@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W01"
 date: 2025-01-05T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 7 items, 0 CVEs. 5 high, 2 medium."
+description: "Weekly security intelligence digest covering 7 items, 2 CVEs. 5 high, 2 medium."
 tags: [campaign, malware, threat-intelligence, tool, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -28,6 +28,17 @@ This week, the cybersecurity landscape was dominated by high-severity incidents 
 - **What happened**: A state-sponsored group linked to China breached the Office of Foreign Assets Control (OFAC), potentially accessing sensitive sanctions-related data.
 - **Who’s affected**: The U.S. government, financial institutions, and global businesses relying on OFAC data are at risk of compromised sanctions enforcement.
 - **What to do**: Strengthen perimeter defenses, monitor traffic for signs of state-sponsored activity, and review access controls.
+
+### Critical vulnerability CVE-2024-12898
+- **What happened**: A vulnerability was found in 1000 Projects Attendance Tracking Management System 1.0. It has been declared as critical. This vulnerability affects unknown code of the file /admin/faculty_action.php...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2024-12899
+- **What happened**: A vulnerability was found in 1000 Projects Attendance Tracking Management System 1.0. It has been rated as critical. This issue affects some unknown processing of the file /admin/course_action.php....
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## notable developments
 

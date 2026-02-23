@@ -2,17 +2,17 @@
 title: "Weekly threat intelligence digest — 2025-W05"
 date: 2025-02-02T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 3 items, 4 CVEs. 2 high, 1 medium."
+description: "Weekly security intelligence digest covering 3 items, 6 CVEs. 2 high, 1 medium."
 tags: [threat-intelligence, tool, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
 
 # Weekly Threat Intelligence Digest: 2025-W05 (January 27 - February 2)
 
-## executive summary
+## Executive summary
 This week, the cybersecurity landscape was marked by critical vulnerabilities and emerging threats. Apple addressed an actively exploited zero-day in its CoreMedia framework, while threat actors targeted SimpleHelp's remote monitoring software to deploy backdoors on client networks. Additionally, concerns arose over DeepSeek AI's rapid adoption, highlighting potential security and privacy risks.
 
-## critical & high priority
+## Critical & high priority
 
 ### apple patches actively exploited zero-day in coremedia framework
 - **What happened**: Apple released emergency updates to address a zero-day vulnerability (CVE-2025-24085) in the CoreMedia framework, which was being exploited against older iOS devices.
@@ -23,6 +23,17 @@ This week, the cybersecurity landscape was marked by critical vulnerabilities an
 - **What happened**: Multiple vulnerabilities (CVE-2024-57726, CVE-2024-57727, CVE-2024-57728) in SimpleHelp's RMM software were exploited to gain unauthorized access and deploy backdoors.
 - **Who's affected**: Managed service providers using SimpleHelp are at risk. Immediate action is needed to mitigate these threats.
 - **What to do**: Apply patches, restrict access to sensitive systems, and monitor network traffic for suspicious activity.
+
+### Critical vulnerability CVE-2024-45647
+- **What happened**: IBM Security Verify Access 10.0.0 through 10.0.8 and IBM Security Verify Access Docker 10.0.0 through 10.0.8 could allow could an unverified user to change the password of an expired user without p...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-23218
+- **What happened**: WeGIA is an open source web manager with a focus on the Portuguese language and charitable institutions. A SQL Injection vulnerability was identified in the WeGIA application, specifically in the a...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## notable developments
 

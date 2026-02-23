@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W37"
 date: 2025-09-14T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 3 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 5 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 Microsoft's September Patch Tuesday patches a wormable remote code execution vulnerability in the Windows TCP/IP stack along with two actively exploited privilege escalation zero-days. (CVE-2025-37810, CVE-2025-37811, CVE-2025-37812) Affected: Microsoft Windows.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-9751
+- **What happened**: A weakness has been identified in Campcodes Online Learning Management System 1.0. This issue affects some unknown processing of the file /login.php. This manipulation of the argument Username caus...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-9752
+- **What happened**: A security vulnerability has been detected in D-Link DIR-852 1.00CN B09. Impacted is the function soapcgi_main of the file soap.cgi of the component SOAP Service. Such manipulation of the argument ...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

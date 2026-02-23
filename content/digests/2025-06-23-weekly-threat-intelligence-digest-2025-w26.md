@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W26"
 date: 2025-06-29T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 2 CVEs. 1 critical, 1 high."
+description: "Weekly security intelligence digest covering 2 items, 4 CVEs. 1 critical, 1 high."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -28,6 +28,17 @@ A critical heap overflow vulnerability in VMware ESXi allows an attacker with lo
 A critical authentication bypass in ASUS router firmware allows unauthenticated attackers to remotely take over affected routers, with botnets already scanning for and exploiting vulnerable devices. (CVE-2025-28703) Affected: ASUS RT-AX series routers, ASUS ROG Rapture series.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### 1. **Critical vulnerability CVE-2025-6097**
+A vulnerability was found in UTT 进取 750W up to 5.0 and classified as critical. Affected by this issue is the function formDefineManagement of the file /goform/setSysAdm of the component Administrat...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
+### 2. **Critical vulnerability CVE-2025-6116**
+A vulnerability was found in Das Parking Management System 停车场管理系统 6.2.0. It has been classified as critical. This affects an unknown part of the file /IntraFieldVehicle/Search of the component API...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

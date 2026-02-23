@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W21"
 date: 2025-05-25T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 3 items, 1 CVEs. 2 high, 1 informational."
+description: "Weekly security intelligence digest covering 3 items, 3 CVEs. 2 high, 1 informational."
 tags: [campaign, policy, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -28,6 +28,17 @@ Coinbase revealed that threat actors bribed overseas customer support contractor
 Google released an emergency Chrome update fixing a high-severity type confusion vulnerability in V8 that was being exploited in targeted attacks against users in the wild. (CVE-2025-4664) Affected: Google Chrome, Chromium-based browsers.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-4553
+- **What happened**: A vulnerability was found in PHPGurukul Apartment Visitors Management System 1.0 and classified as critical. Affected by this issue is some unknown functionality of the file /admin/bwdates-reports-...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-4554
+- **What happened**: A vulnerability was found in PHPGurukul Apartment Visitors Management System 1.0. It has been classified as critical. This affects an unknown part of the file /admin/bwdates-passreports-details.php...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

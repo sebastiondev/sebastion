@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W39"
 date: 2025-09-28T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 1 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 3 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 A critical deserialization vulnerability in Veeam Backup & Replication allows unauthenticated attackers to gain remote code execution, with ransomware groups actively targeting backup infrastructure. (CVE-2025-40115) Affected: Veeam Backup & Replication.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-10416
+- **What happened**: A vulnerability was identified in Campcodes Grocery Sales and Inventory System 1.0. This impacts an unknown function of the file /ajax.php?action=delete_supplier. The manipulation of the argument I...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-10417
+- **What happened**: A security flaw has been discovered in Campcodes Grocery Sales and Inventory System 1.0. Affected is an unknown function of the file /ajax.php?action=delete_product. The manipulation of the argumen...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

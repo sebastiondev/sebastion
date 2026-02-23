@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2026-W06"
 date: 2026-02-08T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 2 CVEs. 1 critical, 1 high."
+description: "Weekly security intelligence digest covering 2 items, 4 CVEs. 1 critical, 1 high."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -28,6 +28,17 @@ A critical command injection vulnerability in Cisco NX-OS allows unauthenticated
 A critical vulnerability in PostgreSQL allows authenticated users with CREATE FUNCTION privileges to escape the SQL sandbox and execute arbitrary operating system commands on the database server. (CVE-2026-0190) Affected: PostgreSQL 14, 15, 16.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2026-1412
+- **What happened**: A vulnerability has been found in Sangfor Operation and Maintenance Security Management System up to 3.0.12. The impacted element is an unknown function of the file /fort/audit/get_clip_img of the ...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2026-1413
+- **What happened**: A vulnerability was found in Sangfor Operation and Maintenance Security Management System up to 3.0.12. This affects the function portValidate of the file /fort/ip_and_port/port_validate of the com...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

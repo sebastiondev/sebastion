@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W44"
 date: 2025-11-02T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 0 CVEs. 1 informational."
+description: "Weekly security intelligence digest covering 1 items, 2 CVEs. 1 informational."
 tags: [policy, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -16,6 +16,17 @@ This week's digest covers 1 intelligence items, with no critical or high severit
 ## Critical & high priority
 
 No critical or high severity items this week.
+
+### Critical vulnerability CVE-2025-55086
+- **What happened**: In NetXDuo version before 6.4.4, a networking support module for Eclipse Foundation ThreadX, in the DHCPV6 client there was an unchecked index extracting the server DUID from the server reply. With...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-8053
+- **What happened**: Insufficient Granularity of Access Control vulnerability in opentext Flipper allows Exploiting Incorrectly Configured Access Control Security Levels. The vulnerability could allow a low privilege u...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

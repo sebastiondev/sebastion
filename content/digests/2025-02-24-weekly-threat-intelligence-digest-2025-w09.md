@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W09"
 date: 2025-03-02T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 0 CVEs. 1 medium."
+description: "Weekly security intelligence digest covering 1 items, 2 CVEs. 1 medium."
 tags: [campaign, threat-intelligence, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -14,6 +14,17 @@ This week, the cybersecurity landscape was marked by a significant data breach i
 
 ## critical & high priority
 No critical or high severity incidents were reported this week. However, defenders should remain vigilant as attackers continue to target known vulnerabilities, particularly in widely used software and services.
+
+### Critical vulnerability CVE-2025-1379
+- **What happened**: A vulnerability has been found in code-projects Real Estate Property Management System 1.0 and classified as critical. Affected by this vulnerability is an unknown functionality of the file /Admin/...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-1380
+- **What happened**: A vulnerability was found in Codezips Gym Management System 1.0 and classified as critical. Affected by this issue is some unknown functionality of the file /dashboard/admin/del_plan.php. The manip...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## notable developments
 - **Orange Group Data Breach**: A medium severity campaign was confirmed after a threat actor leaked internal documents, source code, and customer records from Orange's Romanian branch. This incident highlights the need for organizations to secure sensitive data across all global operations, especially in regions with less stringent regulatory frameworks. Affected parties include Orange customers and employees whose personal and sensitive information may have been exposed. Immediate actions should focus on monitoring for potential misuse of leaked data and patching any vulnerabilities identified.

@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W31"
 date: 2025-08-03T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 0 CVEs. 1 informational."
+description: "Weekly security intelligence digest covering 1 items, 2 CVEs. 1 informational."
 tags: [policy, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -16,6 +16,17 @@ This week's digest covers 1 intelligence items, with no critical or high severit
 ## Critical & high priority
 
 No critical or high severity items this week.
+
+### Critical vulnerability CVE-2025-7915
+- **What happened**: A vulnerability was found in Chanjet CRM 1.0 and classified as critical. Affected by this issue is some unknown functionality of the file /mail/mailinactive.php of the component Login Page. The man...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2024-6107
+- **What happened**: Due to insufficient verification, an attacker could use a malicious client to bypass authentication checks and run RPC commands in a region. This has been addressed in MAAS and updated in the corre...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W38"
 date: 2025-09-21T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 1 CVEs. 1 critical, 1 high."
+description: "Weekly security intelligence digest covering 2 items, 3 CVEs. 1 critical, 1 high."
 tags: [campaign, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -28,6 +28,17 @@ Cisco disclosed a critical authentication bypass in IOS XE Web UI affecting thou
 A ransomware attack forced a major US hospital network to divert ambulances and revert to paper records across multiple facilities, the largest healthcare disruption since the Change Healthcare incident. Affected: US hospital network, healthcare patients.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-10076
+- **What happened**: A weakness has been identified in SourceCodester Online Polling System 1.0. This affects an unknown function of the file /manage-profile.php. This manipulation of the argument email causes sql inje...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-10077
+- **What happened**: A security vulnerability has been detected in SourceCodester Online Polling System 1.0. This impacts an unknown function of the file /registeracc.php. Such manipulation of the argument email leads ...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

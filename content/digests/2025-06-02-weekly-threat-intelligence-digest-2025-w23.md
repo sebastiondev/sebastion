@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W23"
 date: 2025-06-08T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 1 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 3 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 A critical OGNL injection vulnerability in Atlassian Confluence Server and Data Center allows unauthenticated remote code execution, with ransomware groups actively exploiting unpatched instances. (CVE-2025-31650) Affected: Atlassian Confluence Server, Atlassian Confluence Data Center.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### 1. **Critical vulnerability CVE-2025-2146**
+Buffer overflow in WebService Authentication processing of Small Office Multifunction Printers and Laser Printers(*) which may allow an attacker on the network segment to trigger the affected produ...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
+### 2. **Critical vulnerability CVE-2025-5162**
+A vulnerability, which was classified as critical, has been found in H3C SecCenter SMP-E1114P02 up to 20250513. Affected by this issue is some unknown functionality of the file /safeEvent/importFil...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

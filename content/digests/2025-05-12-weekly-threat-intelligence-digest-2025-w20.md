@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W20"
 date: 2025-05-18T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 7 CVEs. 2 critical."
+description: "Weekly security intelligence digest covering 2 items, 9 CVEs. 2 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -28,6 +28,17 @@ Microsoft's May 2025 Patch Tuesday addresses over 70 vulnerabilities including f
 Two vulnerabilities in Ivanti Endpoint Manager Mobile can be chained to achieve unauthenticated remote code execution, with active exploitation targeting government and critical infrastructure organizations. (CVE-2025-4427, CVE-2025-4428) Affected: Ivanti Endpoint Manager Mobile (EPMM).
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### 1. **Critical vulnerability CVE-2025-4254**
+A vulnerability was found in PCMan FTP Server 2.0.7. It has been rated as critical. Affected by this issue is some unknown functionality of the component LIST Command Handler. The manipulation lead...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
+### 2. **Critical vulnerability CVE-2025-4255**
+A vulnerability classified as critical has been found in PCMan FTP Server 2.0.7. This affects an unknown part of the component RMD Command Handler. The manipulation leads to buffer overflow. It is ...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

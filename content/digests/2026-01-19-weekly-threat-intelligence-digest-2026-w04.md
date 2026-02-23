@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2026-W04"
 date: 2026-01-25T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 0 CVEs. 1 high."
+description: "Weekly security intelligence digest covering 1 items, 2 CVEs. 1 high."
 tags: [campaign, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 A ransomware attack forced one of the largest US school districts to cancel classes and revert to offline operations, exposing student and staff personal data and highlighting the continued targeting of education. Affected: US public school district, students, staff.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### 1. **Critical vulnerability CVE-2026-0851**
+A vulnerability was identified in code-projects Online Music Site 1.0. The affected element is an unknown function of the file /Administrator/PHP/AdminAddUser.php. The manipulation of the argument ...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
+### 2. **Critical vulnerability CVE-2026-0852**
+A security flaw has been discovered in code-projects Online Music Site 1.0. The impacted element is an unknown function of the file /Administrator/PHP/AdminUpdateUser.php. The manipulation of the a...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

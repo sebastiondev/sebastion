@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2026-W07"
 date: 2026-02-15T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 4 CVEs. 1 critical, 1 informational."
+description: "Weekly security intelligence digest covering 2 items, 6 CVEs. 1 critical, 1 informational."
 tags: [policy, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 2 intelligence items across 2 categories, with 1 criti
 Microsoft's February 2026 Patch Tuesday addresses over 55 vulnerabilities including four actively exploited zero-days in Windows, Office, and the .NET Framework. (CVE-2026-0301, CVE-2026-0302, CVE-2026-0303, CVE-2026-0304) Affected: Microsoft Windows, Microsoft Office, .NET Framework.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2022-50981
+- **What happened**: An unauthenticated remote attacker can gain full access on the affected devices as they are shipped without a password by default and setting one is not enforced.
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2026-24936
+- **What happened**: When a specific function is enabled while joining a AD Domain from ADM, an improper input parameters validation vulnerability in a specific CGI program allowing an unauthenticated remote attacker t...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

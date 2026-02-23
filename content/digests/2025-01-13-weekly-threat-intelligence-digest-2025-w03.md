@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W03"
 date: 2025-01-19T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 4 items, 8 CVEs. 3 critical, 1 high."
+description: "Weekly security intelligence digest covering 4 items, 10 CVEs. 3 critical, 1 high."
 tags: [campaign, policy, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -25,6 +25,17 @@ Exposed personal data of students and staff across K-12 districts in North Ameri
 
 ### CISA Emergency Directive for Ivanti Connect Secure
 Targeting federal agencies due to nation-state exploitation. **What happened:** Two vulnerabilities allow privilege escalation and data exfiltration. **Who's affected:** Federal agencies using Ivanti software. **What to do:** Implement patches and enhance monitoring.
+
+### Critical vulnerability CVE-2024-13144
+- **What happened**: A vulnerability classified as critical has been found in zhenfeng13 My-Blog 1.0. Affected is the function uploadFileByEditomd of the file src/main/java/com/site/blog/my/core/controller/admin/BlogCo...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2024-13145
+- **What happened**: A vulnerability classified as critical was found in zhenfeng13 My-Blog 1.0. Affected by this vulnerability is the function upload of the file src/main/java/com/site/blog/my/core/controller/admin/up...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable Developments
 This week saw no new CVEs tracked, indicating a focus on exploiting known vulnerabilities. The PowerSchool breach underscores the need for robust third-party vendor security practices.

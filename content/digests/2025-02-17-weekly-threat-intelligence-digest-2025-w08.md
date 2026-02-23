@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W08"
 date: 2025-02-23T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 4 CVEs. 1 high, 1 critical."
+description: "Weekly security intelligence digest covering 2 items, 6 CVEs. 1 high, 1 critical."
 tags: [campaign, malware, threat-intelligence, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -23,6 +23,17 @@ This week highlighted two significant incidents in the cybersecurity landscape. 
 - **What Happened**: $1.5 billion in Ethereum stolen from Bybit's cold wallet, the largest crypto theft to date.
 - **Who’s Behind It**: North Korean state-sponsored actors likely involved.
 - **Impact**: Highlights vulnerabilities in crypto exchanges' security protocols.
+
+### Critical vulnerability CVE-2025-1160
+- **What happened**: A vulnerability was found in SourceCodester Employee Management System 1.0. It has been rated as critical. Affected by this issue is some unknown functionality of the file index.php. The manipulati...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-1167
+- **What happened**: A vulnerability was found in Mayuri K Employee Management System up to 192.168.70.3 and classified as critical. Affected by this issue is some unknown functionality of the file /hr_soft/admin/Updat...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable Developments
 This week lacked medium or low severity incidents. However, ongoing trends like supply chain attacks and APTs targeting financial sectors remain critical areas for monitoring.

@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2026-W02"
 date: 2026-01-11T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 2 CVEs. 2 critical."
+description: "Weekly security intelligence digest covering 2 items, 4 CVEs. 2 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -28,6 +28,17 @@ A new critical authentication bypass in Fortinet FortiOS allows unauthenticated 
 A critical improper authentication vulnerability in SonicWall SonicOS SSLVPN allows unauthenticated attackers to hijack active VPN sessions, with exploitation observed against government and enterprise targets. (CVE-2026-0150) Affected: SonicWall Gen 6, Gen 7 firewalls.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-15165
+- **What happened**: A vulnerability has been found in itsourcecode Online Cake Ordering System 1.0. The impacted element is an unknown function of the file /updatecustomer.php?action=edit. The manipulation of the argu...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-15166
+- **What happened**: A vulnerability was found in itsourcecode Online Cake Ordering System 1.0. This affects an unknown function of the file /updatesupplier.php?action=edit. The manipulation of the argument ID results ...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W15"
 date: 2025-04-13T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 1 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 3 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 Microsoft's April 2025 Patch Tuesday addresses a Windows Common Log File System zero-day being actively exploited by the RansomEXX ransomware group for privilege escalation. (CVE-2025-29824) Affected: Windows 10, Windows 11, Windows Server 2016-2025.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### 1. **Critical vulnerability CVE-2025-2973**
+A vulnerability, which was classified as critical, was found in code-projects College Management System 1.0. This affects an unknown part of the file /Admin/student.php. The manipulation of the arg...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
+### 2. **Critical vulnerability CVE-2025-2978**
+A vulnerability was found in WCMS 11. It has been rated as critical. Affected by this issue is some unknown functionality of the file /index.php?articleadmin/upload/?&CKEditor=container&CKEditorFun...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

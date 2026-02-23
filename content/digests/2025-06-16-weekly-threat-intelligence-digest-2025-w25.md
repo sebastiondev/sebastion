@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W25"
 date: 2025-06-22T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 0 CVEs. 1 informational."
+description: "Weekly security intelligence digest covering 1 items, 2 CVEs. 1 informational."
 tags: [policy, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -16,6 +16,17 @@ This week's digest covers 1 intelligence items, with no critical or high severit
 ## Critical & high priority
 
 No critical or high severity items this week.
+
+### Critical vulnerability CVE-2025-5855
+- **What happened**: A vulnerability, which was classified as critical, was found in Tenda AC6 15.03.05.16. This affects the function formSetRebootTimer of the file /goform/SetRebootTimer. The manipulation of the argum...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-5856
+- **What happened**: A vulnerability has been found in PHPGurukul BP Monitoring Management System 1.0 and classified as critical. This vulnerability affects unknown code of the file /registration.php. The manipulation ...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

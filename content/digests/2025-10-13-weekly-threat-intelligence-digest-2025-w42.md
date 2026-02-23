@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W42"
 date: 2025-10-19T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 2 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 4 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 Microsoft's October Patch Tuesday addresses a critical Remote Desktop Protocol vulnerability being exploited to gain initial access to enterprise networks without valid credentials. (CVE-2025-42301, CVE-2025-42302) Affected: Microsoft Windows, Windows Remote Desktop Services.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-11310
+- **What happened**: A weakness has been identified in Tipray 厦门天锐科技股份有限公司 Data Leakage Prevention System 天锐数据泄露防护系统 1.0. The affected element is the function findFileServerPage of the file findFileServerPage.do. Execu...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-11311
+- **What happened**: A security vulnerability has been detected in Tipray 厦门天锐科技股份有限公司 Data Leakage Prevention System 天锐数据泄露防护系统 1.0. The impacted element is the function findTenantPage of the file findTenantPage.do. T...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

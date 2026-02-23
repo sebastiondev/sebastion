@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W11"
 date: 2025-03-16T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 3 items, 7 CVEs. 1 critical, 2 high."
+description: "Weekly security intelligence digest covering 3 items, 9 CVEs. 1 critical, 2 high."
 tags: [malware, supply-chain, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -35,6 +35,17 @@ FBI, CISA, and MS-ISAC warn that the Medusa ransomware-as-a-service operation ha
 A supply chain attack targeting the popular tj-actions/changed-files GitHub Action compromised CI/CD secrets across thousands of repositories by injecting malicious code that exfiltrated secrets to workflow logs. (CVE-2025-30066) Affected: Repositories using tj-actions/changed-files GitHub Action.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### 1. **Critical vulnerability CVE-2025-1840**
+A vulnerability was found in ESAFENET CDG 5.6.3.154.205. It has been rated as critical. Affected by this issue is some unknown functionality of the file /CDGServer3/workflowE/useractivate/updateorg...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
+### 2. **Critical vulnerability CVE-2025-1841**
+A vulnerability classified as critical has been found in ESAFENET CDG 5.6.3.154.205. This affects an unknown part of the file /CDGServer3/logManagement/ClientSortLog.jsp. The manipulation of the ar...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

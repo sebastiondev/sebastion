@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W18"
 date: 2025-05-04T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 0 CVEs. 2 high."
+description: "Weekly security intelligence digest covering 2 items, 2 CVEs. 2 high."
 tags: [malware, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -28,6 +28,17 @@ UK retail giant Marks & Spencer suffered a significant cyberattack that disrupte
 UK retailer Co-op shut down parts of its IT infrastructure after detecting unauthorized access, becoming the second major British retailer hit by cyberattack in weeks following Marks & Spencer. Affected: Co-op UK retail and food supply operations.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-43961
+- **What happened**: In LibRaw before 0.21.4, metadata/tiff.cpp has an out-of-bounds read in the Fujifilm 0xf00c tag parser.
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-43962
+- **What happened**: In LibRaw before 0.21.4, phase_one_correct in decoders/load_mfbacks.cpp has out-of-bounds reads for tag 0x412 processing, related to large w0 or w1 values or the frac and mult calculations.
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

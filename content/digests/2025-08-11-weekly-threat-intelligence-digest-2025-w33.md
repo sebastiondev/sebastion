@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W33"
 date: 2025-08-17T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 6 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 8 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 Microsoft's August Patch Tuesday addresses over 80 vulnerabilities with six confirmed actively exploited zero-days spanning Windows kernel, Office, and the SmartScreen security feature. (CVE-2025-34710, CVE-2025-34711, CVE-2025-34712, CVE-2025-34713, CVE-2025-34714, CVE-2025-34715) Affected: Microsoft Windows, Microsoft Office, Microsoft SmartScreen.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-36604
+- **What happened**: Dell Unity, version(s) 5.5 and prior, contain(s) an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability. An unauthenticated attacker with remote...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-44954
+- **What happened**: RUCKUS SmartZone (SZ) before 6.1.2p3 Refresh Build has a hardcoded SSH private key for a root-equivalent user account.
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

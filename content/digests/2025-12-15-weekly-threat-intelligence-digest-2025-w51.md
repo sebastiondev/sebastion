@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W51"
 date: 2025-12-21T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 0 CVEs. 1 high, 1 informational."
+description: "Weekly security intelligence digest covering 2 items, 2 CVEs. 1 high, 1 informational."
 tags: [campaign, policy, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 2 intelligence items across 2 categories, with 1 criti
 A misconfigured identity management update at a major cloud provider caused a cascading multi-region outage lasting over 12 hours, affecting thousands of businesses and highlighting cloud concentration risk. Affected: Cloud service consumers, SaaS providers.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-14209
+- **What happened**: A weakness has been identified in Campcodes School File Management System 1.0. This impacts an unknown function of the file /update_query.php. This manipulation of the argument stud_id causes sql i...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-14210
+- **What happened**: A security vulnerability has been detected in projectworlds Advanced Library Management System 1.0. Affected is an unknown function of the file /delete_member.php. Such manipulation of the argument...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W36"
 date: 2025-09-07T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 0 CVEs. 1 informational."
+description: "Weekly security intelligence digest covering 1 items, 2 CVEs. 1 informational."
 tags: [policy, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -16,6 +16,17 @@ This week's digest covers 1 intelligence items, with no critical or high severit
 ## Critical & high priority
 
 No critical or high severity items this week.
+
+### Critical vulnerability CVE-2025-9406
+- **What happened**: A weakness has been identified in xuhuisheng lemon up to 1.13.0. This affects the function uploadImage of the file CmsArticleController.java of the component com.mossle.cms.web.CmsArticleController...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-46411
+- **What happened**: A stack-based buffer overflow vulnerability exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.0 and Master Branch (35a819fa). A specially crafted MFER file can lead to ar...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

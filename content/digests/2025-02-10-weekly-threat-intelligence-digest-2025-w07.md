@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W07"
 date: 2025-02-16T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 3 items, 8 CVEs. 3 critical."
+description: "Weekly security intelligence digest covering 3 items, 10 CVEs. 3 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -34,6 +34,17 @@ This week, critical vulnerabilities dominated the threat landscape, with multipl
 **Who's affected**: Organizations using PostgreSQL and BeyondTrust software, particularly those in the public sector or financial industries.
 
 **What to do**: Apply patches for both PostgreSQL and BeyondTrust as soon as they are available. Monitor for any unauthorized access attempts and restrict database access to only necessary services.
+
+### Critical vulnerability CVE-2025-20634
+- **What happened**: In Modem, there is a possible out of bounds write due to a missing bounds check. This could lead to remote code execution, if a UE has connected to a rogue base station controlled by the attacker, ...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2024-50500
+- **What happened**: Missing Authorization vulnerability in By Averta Shortcodes and extra features for Phlox theme allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Shortcodes...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## notable developments
 While no new CVEs were tracked this week, ongoing exploitation of existing vulnerabilities remains a significant concern. Attackers are increasingly focusing on chaining multiple flaws to achieve more severe outcomes, such as full system compromise or data exfiltration. Security researchers have also noted an uptick in zero-day exploits targeting enterprise software, suggesting a shift in attacker focus toward critical infrastructure and financial institutions.

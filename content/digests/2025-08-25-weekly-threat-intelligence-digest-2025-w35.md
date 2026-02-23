@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W35"
 date: 2025-08-31T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 1 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 1 items, 3 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 A critical vulnerability in GitLab CE/EE allows attackers to hijack any account by manipulating the password reset flow, with exploitation already observed targeting internet-facing instances. (CVE-2025-39821) Affected: GitLab Community Edition, GitLab Enterprise Edition.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-27909
+- **What happened**: IBM Concert Software 1.0.0 through 1.1.0 uses cross-origin resource sharing (CORS) which could allow an attacker to carry out privileged actions as the domain name is not being limited to only trus...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-55293
+- **What happened**: Meshtastic is an open source mesh networking solution. Prior to v2.6.3, an attacker can send NodeInfo with a empty publicKey first, then overwrite it with a new key. First sending a empty key bypas...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

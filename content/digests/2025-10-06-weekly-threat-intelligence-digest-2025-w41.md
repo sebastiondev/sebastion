@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W41"
 date: 2025-10-12T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 0 CVEs. 1 informational."
+description: "Weekly security intelligence digest covering 1 items, 2 CVEs. 1 informational."
 tags: [policy, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -16,6 +16,17 @@ This week's digest covers 1 intelligence items, with no critical or high severit
 ## Critical & high priority
 
 No critical or high severity items this week.
+
+### 1. **Critical vulnerability CVE-2025-11139**
+A vulnerability was determined in Bjskzy Zhiyou ERP up to 11.0. Affected is the function uploadStudioFile of the component com.artery.form.services.FormStudioUpdater. This manipulation of the argum...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
+### 2. **Critical vulnerability CVE-2025-11140**
+A vulnerability was identified in Bjskzy Zhiyou ERP up to 11.0. Affected by this vulnerability is the function openForm of the component com.artery.richclient.RichClientService. Such manipulation o...
+**Impact:** High risk of exploitation leading to system compromise.
+**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 

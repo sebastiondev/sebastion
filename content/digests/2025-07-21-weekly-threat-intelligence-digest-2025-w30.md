@@ -2,7 +2,7 @@
 title: "Weekly threat intelligence digest — 2025-W30"
 date: 2025-07-27T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 2 CVEs. 1 high."
+description: "Weekly security intelligence digest covering 1 items, 4 CVEs. 1 high."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
@@ -21,6 +21,17 @@ This week's digest covers 1 intelligence items across 1 categories, with 1 criti
 Apple released emergency security updates across iOS, iPadOS, and macOS to fix two WebKit zero-day vulnerabilities actively exploited in sophisticated spyware attacks targeting journalists and activists. (CVE-2025-31201, CVE-2025-31202) Affected: Apple iOS, Apple iPadOS, Apple macOS.
 
 **Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+
+### Critical vulnerability CVE-2025-7587
+- **What happened**: A vulnerability was found in code-projects Online Appointment Booking System 1.0. It has been rated as critical. Affected by this issue is some unknown functionality of the file /cover.php. The man...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
+### Critical vulnerability CVE-2025-7593
+- **What happened**: A vulnerability was found in code-projects Job Diary 1.0 and classified as critical. Affected by this issue is some unknown functionality of the file /view-all.php. The manipulation of the argument...
+- **Who's affected**: Systems running the vulnerable software.
+- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+
 
 ## Notable developments
 
