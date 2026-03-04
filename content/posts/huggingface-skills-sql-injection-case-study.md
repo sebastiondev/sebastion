@@ -1,5 +1,5 @@
 ---
-title: "I found SQL injection in Hugging Face's AI skills framework and mass-fixed it in a weekend"
+title: "I found SQL injection in Hugging Face's AI skills framework and got it fixed in nine days"
 date: 2026-03-02T07:18:01+00:00
 draft: false
 tags:
@@ -14,7 +14,7 @@ categories:
   - Security
   - AI
 coverImage: /images/huggingface-skills-sql-injection/article-github-pr-merged.png
-description: "An audit of Hugging Face's skills repository found five SQL injection vectors in a single file. The fix was merged in two days."
+description: "An audit of Hugging Face's skills repository found five SQL injection vectors in a single file. The fix was merged in nine days."
 tier: free
 contentType: research
 author: Sebastion
@@ -23,7 +23,7 @@ keyFindings:
   - "DuckDB's execute() method processes multiple semicolon-separated statements, meaning a single injected payload could chain DROP TABLE with data exfiltration."
   - "DuckDB's built-in read_csv_auto() and COPY TO functions meant successful injection could read or write arbitrary files on the host system."
   - "The fix replaced all five string-formatted queries with parameterised queries using DuckDB's native $1 placeholder syntax, totalling 30 lines changed."
-  - "Hugging Face maintainer burtenshaw merged PR #50 within two days of submission with no requested changes."
+  - "Hugging Face maintainer burtenshaw merged PR #50 within nine days of submission with no requested changes."
 artifacts:
   - type: reference
     url: https://github.com/huggingface/skills/pull/50
@@ -45,7 +45,7 @@ artifacts:
     description: "CWE-89 - Improper Neutralization of Special Elements used in an SQL Command"
 ---
 
-Hugging Face's [skills](https://github.com/huggingface/skills) repository is a framework for giving AI coding agents - Claude Code, Cursor, Codex, Gemini CLI - structured capabilities through reusable skill files. It has over 1,600 stars and ships a SQL management module that lets agents create tables, insert rows and run queries against a local DuckDB database. I audited that module and found five SQL injection vectors in a single file. The [fix was merged](https://github.com/huggingface/skills/pull/50) two days later.
+Hugging Face's [skills](https://github.com/huggingface/skills) repository is a framework for giving AI coding agents - Claude Code, Cursor, Codex, Gemini CLI - structured capabilities through reusable skill files. It has over 1,600 stars and ships a SQL management module that lets agents create tables, insert rows and run queries against a local DuckDB database. I audited that module and found five SQL injection vectors in a single file. The [fix was merged](https://github.com/huggingface/skills/pull/50) nine days later.
 
 ## What the module does
 
@@ -91,7 +91,7 @@ DuckDB supports parameterised queries using positional `$1`, `$2` placeholders -
 
 For table and column names, which cannot be parameterised in standard SQL, I added identifier validation that rejects anything not matching `[a-zA-Z_][a-zA-Z0-9_]*`. This is deliberately strict. A table name should never contain semicolons, quotes or parentheses, and if an agent's reasoning produces one that does, rejecting it early is the correct behaviour.
 
-The change totalled 30 lines of additions and 5 deletions. All 15 existing tests continued to pass. I submitted [PR #50](https://github.com/huggingface/skills/pull/50) with the fix, a clear description of each vector and links to DuckDB's security guidance. Maintainer `burtenshaw` merged it within two days with no requested changes.
+The change totalled 30 lines of additions and 5 deletions. All 15 existing tests continued to pass. I submitted [PR #50](https://github.com/huggingface/skills/pull/50) with the fix, a clear description of each vector and links to DuckDB's security guidance. Maintainer `burtenshaw` merged it within nine days with no requested changes.
 
 ## Why this bug class keeps recurring in AI tooling
 
