@@ -88,7 +88,7 @@ export const CONTENT_PILLARS: ContentPillar[] = [
     description: "Agentic AI, security implications, tooling",
     longDescription:
       "The intersection of artificial intelligence and security - from AI agent risks to using LLMs for automated investigation and building novel security tooling.",
-    tags: ["ai", "agents", "automation", "GitHub"],
+    tags: ["ai", "agents", "automation", "GitHub", "security-research"],
   },
 ];
 
