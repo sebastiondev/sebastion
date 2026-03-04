@@ -38,8 +38,7 @@ export default function Home() {
           <ScrollReveal delay={0.05}>
             <h1 className="font-['Source_Serif_4',Georgia,serif] text-[clamp(2.8rem,6vw,4.8rem)] font-bold tracking-tight leading-[1.04] text-[var(--color-text-primary)] mb-7 max-w-[720px]">
               Original research{" "}<br className="hidden sm:block" />
-              that<br className="block sm:hidden" />
-              {" "}machines&nbsp;cite.
+              that&nbsp;machines&nbsp;cite.
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
