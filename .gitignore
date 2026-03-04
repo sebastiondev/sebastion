@@ -40,7 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# keep github agents & instructions in repo
-!.github/
-!.github/agents/
-!.github/instructions/
+# copilot / agent config (local only)
+.github/agents/
+.github/instructions/
+skills/
