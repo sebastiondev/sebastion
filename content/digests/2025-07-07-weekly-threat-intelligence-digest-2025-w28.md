@@ -1,52 +1,47 @@
 ---
-title: "Weekly threat intelligence digest — 2025-W28"
-date: 2025-07-13T18:00:00+00:00
+title: Weekly threat intelligence digest — 2025-W28
+date: 2025-07-13T18:00:00.000Z
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 4 CVEs. 1 critical."
-tags: [threat-intelligence, vulnerability, weekly-digest]
-series: "Weekly Digest"
+description: >-
+  Weekly security intelligence digest covering 1 items, 2 CVEs. 2 critical, 0
+  high, 0 medium, 0 low.
+tags:
+  - threat-intelligence
+  - weekly-digest
+  - vulnerability
+series: Weekly Digest
 ---
-
-# Weekly threat intelligence digest: 2025-W28 (July 7 – 13, 2025)
+# Weekly threat intelligence digest: July 7 - 13, 2025
 
 ## Executive summary
-
-This week's digest covers 1 intelligence items across 1 categories, with 1 critical or high severity item requiring immediate attention. Key themes include critical vulnerabilities requiring immediate patching. Notable this week: Microsoft July 2025 Patch Tuesday Addresses Critical Hyper-V Escape.
+This week tracked 1 curated intelligence items and 2 newly published CVEs. The risk profile remained acute, with 2 critical and 0 high severity disclosures in public reporting. Priority themes were vulnerability and active exploitation pressure around internet-exposed enterprise software.
 
 ## Critical & high priority
-
-### Microsoft July 2025 Patch Tuesday Addresses Critical Hyper-v Escape
-**Critical** · Vulnerability · 2025-07-08
-
-Microsoft's July Patch Tuesday fixes over 60 vulnerabilities including a critical Hyper-V guest-to-host escape being exploited by nation-state actors for cloud infrastructure attacks. (CVE-2025-33654, CVE-2025-33671) Affected: Microsoft Windows, Microsoft Hyper-V, Azure.
-
-**Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
-
-### Critical vulnerability CVE-2025-0634
-- **What happened**: Use After Free vulnerability in Samsung Open Source rLottie allows Remote Code Inclusion.This issue affects rLottie: V0.2.
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
-
-### Critical vulnerability CVE-2025-53075
-- **What happened**: Improper Input Validation vulnerability in Samsung Open Source rLottie allows Path Traversal.This issue affects rLottie: V0.2.
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
-
+### 1. **Microsoft July 2025 Patch Tuesday Addresses Critical Hyper-V Escape**
+- **What happened**: Microsoft released its July 2025 Patch Tuesday updates addressing over 60 security vulnerabilities. The most critical fix resolves a Hyper-V guest-to-host escape vulnerability that Microsoft acknowledged is under active exploitation. The company attributed the exploitation to a nation-state threat actor targeting cloud service provider infrastructure. A second zero-day in the Windows MSHTML platform was also patched, which was being used in phishing campaigns to bypass Mark-of-the-Web protections.
+- **Who's affected**: Organizations running Hyper-V for on-premises virtualization and cloud service providers using Hyper-V-based infrastructure. The MSHTML vulnerability affects all Windows users who may receive malicious HTML files via email or web downloads. Azure customers benefit from Microsoft's accelerated patching of their own infrastructure.
+- **What to do**: Patch or mitigate affected systems on an expedited timeline, validate exposure from external attack paths, and add targeted detections for known exploitation behavior.
 
 ## Notable developments
-
-No medium or low severity items to highlight this week.
+Most tracked items this week were critical/high vulnerability stories, with no major medium or informational shifts requiring separate strategic treatment.
 
 ## Vulnerability landscape
+This week saw 2 newly published CVEs in NVD-aligned tracking for the reporting window.
+- **Critical**: 2
+- **High**: 0
+- **Medium**: 0
+- **Low**: 0
+- **Top affected vendors**: Azure (24), Microsoft (4)
 
-This week tracked 2 unique CVEs: CVE-2025-33654, CVE-2025-33671. Severity distribution: 1 critical. The concentration of vulnerability items continues to underline the importance of timely patch management and continuous monitoring.
+Priority CVEs observed in this window included:
+- **CVE-2025-33654** (Critical): Vendor advisory lists a high-priority issue requiring review.
+- **CVE-2025-33671** (Critical): Vendor advisory lists a high-priority issue requiring review.
 
 ## Recommended actions
-
-1. **Review and apply patches** for all items listed above, prioritising critical and high severity findings.
-2. **Priority patching targets this week:** Microsoft Hyper-V, Microsoft Windows.
-3. **Update threat intelligence feeds** and ensure your SIEM/SOAR rules reflect this week's CVEs and TTPs.
+1. **Prioritize internet-facing patching**: Resolve critical and high-severity items first, with strict SLA enforcement for edge systems.
+2. **Harden identity and admin pathways**: Require phishing-resistant MFA, reduce standing privileges, and audit privileged sessions.
+3. **Operationalize detections**: Convert this week's CVEs and campaign behaviors into SIEM/SOAR detections and threat hunts.
+4. **Protect recovery paths**: Isolate and test backups, then validate restoration workflows against ransomware and destructive attack scenarios.
 
 ## Looking ahead
-
-Looking ahead to July 14 – 20, 2025: monitor vendors including Microsoft Windows, Microsoft Hyper-V for follow-up patches or exploitation reports. When active exploitation is confirmed on critical items, expect increased attacker interest and copycat campaigns within 7–14 days.
+For July 14 - 20, 2025, expect continued exploitation attempts against newly disclosed enterprise software flaws, plus copycat scanning after proof-of-concept publication. Teams should maintain elevated monitoring for externally exposed assets and review compensating controls where patch windows are delayed.

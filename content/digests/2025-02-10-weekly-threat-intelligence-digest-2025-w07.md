@@ -2,66 +2,147 @@
 title: "Weekly threat intelligence digest — 2025-W07"
 date: 2025-02-16T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 3 items, 10 CVEs. 3 critical."
-tags: [threat-intelligence, vulnerability, weekly-digest]
+description: "Weekly security intelligence digest covering 12 items, 12 CVEs. 3 critical."
+tags: [campaign, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
 
-# Weekly Threat Intelligence Digest: 2025-W07 (February 10-16)
+# Weekly threat intelligence digest: February 10 - 16, 2025
 
-## executive summary
-This week, critical vulnerabilities dominated the threat landscape, with multiple zero-day exploits being actively exploited across enterprise systems. Microsoft's Patch Tuesday addressed over 55 flaws, including several high-severity issues in Windows components like NTLMv2 and LDAP. Meanwhile, attackers are chaining vulnerabilities in Palo Alto Networks' PAN-OS and PostgreSQL to execute targeted attacks against financial institutions and government agencies. Defenders must prioritize patching and monitoring for these critical issues.
+## Executive summary
+This week saw a surge in critical security updates and active exploitation of zero-day vulnerabilities. Microsoft's Patch Tuesday addressed over 55 vulnerabilities, including multiple actively exploited flaws in Windows components like NTLMv2 and LDAP. Palo Alto Networks disclosed a severe authentication bypass in PAN-OS that was quickly chained with other vulnerabilities to achieve remote code execution on firewalls. Additionally, a PostgreSQL SQL injection zero-day was exploited alongside a BeyondTrust Remote Support vulnerability to compromise US Treasury Department systems. Other notable vulnerabilities included critical flaws in SourceCodester and Mayuri K employee management systems, as well as FortiSandbox's cross-site scripting (XSS) issue. The overall threat level remains high due to the rapid exploitation of disclosed vulnerabilities.
 
-## critical & high priority
+---
 
-### microsoft's february 2025 patch tuesday fixes actively exploited zero-days
-**What happened**: Microsoft released its February Patch Tuesday updates, addressing over 55 vulnerabilities in Windows and related services. Among the patches were multiple zero-day exploits under active exploitation, including CVE-2025-21391 (NTLMv2 remote code execution) and CVE-2025-21418 (LDAP injection). These flaws could allow attackers to gain unauthorized access or elevate privileges.
+## Critical & high priority
+### [CRITICAL] Microsoft February 2025 Patch Tuesday Fixes Actively Exploited Zero-Days
+**What happened:**  
+Microsoft released its February 2025 security updates, patching over 55 vulnerabilities across its product portfolio. The update addresses multiple zero-day vulnerabilities under active exploitation, including an elevation of privilege flaw in Windows Storage and a privilege escalation in the Windows Ancillary Function Driver for WinSock.
 
-**Who's affected**: All Windows users, particularly those running older versions of the operating system and related services. Enterprises relying on NTLMv2 for authentication are at heightened risk.
+**Technical details:**  
+- **CVE-2025-21391**: A critical elevation of privilege vulnerability in Windows Storage that allows attackers to delete targeted files. This flaw was actively exploited before the patch was released.
+- **CVE-2025-21418, CVE-2025-21376, CVE-2025-21377**: Additional critical vulnerabilities in Windows components, including NTLMv2 and LDAP, which were also under active exploitation.
 
-**What to do**: Apply updates immediately. Monitor for any signs of exploitation in your environment, such as unusual network traffic or failed login attempts. Consider implementing multi-factor authentication (MFA) for additional security.
+**Who's affected:**  
+Windows 10, Windows 11, Windows Server 2022, and Windows Server 2025 users are at risk. These updates impact a wide range of enterprise environments relying on Microsoft products.
 
-### palo alto pan-os authentication bypass exploited in chained attacks
-**What happened**: A critical authentication bypass vulnerability (CVE-2025-0108) in Palo Alto Networks' PAN-OS management interface has been exploited in combination with another flaw (CVE-2025-0110) to achieve remote code execution on firewalls. This allows attackers to take full control of affected devices.
+**What to do:**  
+- Apply the February Patch Tuesday updates immediately to all affected systems.
+- Monitor for additional exploitation attempts targeting these vulnerabilities in unpatched environments.
+- Consider implementing network segmentation and least privilege policies to mitigate potential attack vectors.
 
-**Who's affected**: Enterprises using Palo Alto Networks firewalls, particularly those running PAN-OS versions prior to the patched release. Financial institutions and critical infrastructure sectors have been targeted in recent attacks.
+---
 
-**What to do**: Update PAN-OS to the latest version immediately. Disable unused management interfaces and implement strict access controls. Conduct a thorough audit of firewall configurations to identify potential attack vectors.
+### [CRITICAL] Palo Alto PAN-OS Authentication Bypass Exploited in Chained Attacks
+**What happened:**  
+A critical authentication bypass vulnerability (CVE-2025-0108) was disclosed in Palo Alto Networks' PAN-OS management interface. Within days of the disclosure, threat actors began actively exploiting this flaw by chaining it with previously known vulnerabilities to achieve remote code execution on affected firewalls.
 
-### postgresql zero-day exploited alongside beyondtrust in targeted attacks
-**What happened**: A SQL injection zero-day (CVE-2025-1094) in PostgreSQL's interactive tool was exploited alongside a previously disclosed BeyondTrust Remote Support vulnerability (CVE-2024-12356) to compromise systems. This attack targeted the US Treasury Department, highlighting the risks of combining known and unknown vulnerabilities.
+**Technical details:**  
+- **CVE-2025-0108**: This vulnerability allows unauthenticated attackers to bypass authentication mechanisms in the PAN-OS web interface. The flaw has a CVSS score of 8.8, making it highly critical.
+- Exploitation attempts were observed originating from multiple IP addresses, indicating widespread activity.
 
-**Who's affected**: Organizations using PostgreSQL and BeyondTrust software, particularly those in the public sector or financial industries.
+**Who's affected:**  
+All versions of Palo Alto Networks PAN-OS are vulnerable. This includes firewalls used in enterprise and critical infrastructure environments.
 
-**What to do**: Apply patches for both PostgreSQL and BeyondTrust as soon as they are available. Monitor for any unauthorized access attempts and restrict database access to only necessary services.
+**What to do:**  
+- Apply the official PAN-OS updates provided by Palo Alto Networks immediately.
+- Review firewall configurations for any signs of unauthorized access or unusual activity.
+- Implement additional layers of authentication (e.g., multi-factor authentication) for PAN-OS interfaces to mitigate similar risks in the future.
 
-### Critical vulnerability CVE-2025-20634
-- **What happened**: In Modem, there is a possible out of bounds write due to a missing bounds check. This could lead to remote code execution, if a UE has connected to a rogue base station controlled by the attacker, ...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+---
 
-### Critical vulnerability CVE-2024-50500
-- **What happened**: Missing Authorization vulnerability in By Averta Shortcodes and extra features for Phlox theme allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Shortcodes...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+### [CRITICAL] PostgreSQL Zero-Day Exploited Alongside BeyondTrust in Targeted Attacks
+**What happened:**  
+A previously unknown SQL injection zero-day in PostgreSQL's interactive tool was exploited alongside a known vulnerability in BeyondTrust Remote Support to compromise US Treasury Department systems. This attack highlights the dangers of chaining multiple vulnerabilities for advanced exploitation.
 
+**Technical details:**  
+- **CVE-2025-1094**: A critical SQL injection flaw in PostgreSQL's interactive terminal that enables remote code execution.
+- The attack leveraged this zero-day alongside a previously disclosed BeyondTrust Remote Support vulnerability to gain unauthorized access to sensitive systems.
 
-## notable developments
-While no new CVEs were tracked this week, ongoing exploitation of existing vulnerabilities remains a significant concern. Attackers are increasingly focusing on chaining multiple flaws to achieve more severe outcomes, such as full system compromise or data exfiltration. Security researchers have also noted an uptick in zero-day exploits targeting enterprise software, suggesting a shift in attacker focus toward critical infrastructure and financial institutions.
+**Who's affected:**  
+PostgreSQL users, BeyondTrust customers, and the US Treasury Department are at risk. This incident underscores the need for robust database security practices.
 
-## vulnerability landscape
-- **Total new CVEs tracked**: 0 (a notable decrease from previous weeks)
-- **Severity distribution**: Critical vulnerabilities accounted for the majority of reported incidents, with high-severity flaws also seeing significant activity.
-- **Top affected vendors**: Microsoft, Palo Alto Networks, and BeyondTrust continue to be hot targets for attackers. The financial sector has been particularly hard-hit this week.
+**What to do:**  
+- Patch PostgreSQL instances with the official updates addressing CVE-2025-1094.
+- Review and secure BeyondTrust Remote Support configurations to prevent unauthorized access.
+- Conduct a thorough audit of database permissions and network segmentation to isolate critical systems from potential attack vectors.
 
-## recommended actions
-1. Prioritize patching for Microsoft's February updates, especially the NTLMv2 and LDAP vulnerabilities.
-2. Secure PAN-OS management interfaces by disabling unused ports and implementing strict access controls.
-3. Monitor PostgreSQL instances for any signs of SQL injection attempts or unauthorized access.
-4. Review BeyondTrust configurations to ensure they are secure and up-to-date.
-5. Implement MFA wherever possible to mitigate the risks associated with compromised credentials.
+---
 
-## looking ahead
-Next week, expect continued activity around Microsoft's Patch Tuesday updates, as attackers may seek to exploit any lingering vulnerabilities. Additionally, researchers should keep an eye on potential zero-days in other enterprise software, such as Adobe Acrobat or Oracle products, which have been historically targeted by threat actors. The combination of multiple vulnerabilities in chained attacks is likely to remain a key tactic for sophisticated adversaries.
+## Notable developments
+### [NOTABLE] Multiple Critical Vulnerabilities in Employee Management Systems
+**What happened:**  
+Several employee management systems were found to contain critical vulnerabilities, including SQL injection flaws that could lead to unauthorized access or data breaches. These include:
 
-Stay vigilant and stay safe.
+- **CVE-2025-1167**: A critical SQL injection vulnerability in Mayuri K Employee Management System up to version 192.168.70.3.
+- **CVE-2025-1168**: A critical SQL injection flaw in SourceCodester Contact Manager with Export to VCF 1.0.
+- **CVE-2025-1183**: Another critical SQL injection vulnerability in CodeZips Gym Management System 1.0.
+
+**Who's affected:**  
+Organizations using these employee management systems are at risk, particularly those in the healthcare and financial sectors where sensitive data is managed.
+
+**What to do:**  
+- Apply available patches for these vulnerabilities immediately.
+- Conduct a security review of custom or third-party employee management systems to identify potential risks.
+
+---
+
+### [NOTABLE] SolarWinds Server-Side Request Forgery Vulnerability
+**What happened:**  
+A server-side request forgery (SSRF) vulnerability was identified in SolarWinds Platform, which could allow attackers to manipulate web requests and gain unauthorized access to sensitive data.
+
+**Technical details:**  
+- **CVE-2024-52606**: This medium-severity vulnerability has a CVSS score of 3.5 but could still be exploited to disrupt operations or gather sensitive information.
+
+**Who's affected:**  
+Organizations using SolarWinds Platform are at risk, particularly those in the energy, healthcare, and financial sectors.
+
+**What to do:**  
+- Apply the official patches provided by SolarWinds.
+- Monitor for any signs of unauthorized access or异常 network traffic originating from SolarWinds instances.
+
+---
+
+## Vulnerability landscape
+### [OVERVIEW] Critical Vulnerabilities in Enterprise Software
+This week's updates highlight a concerning trend of critical vulnerabilities in widely used enterprise software. Microsoft's Patch Tuesday addressed multiple actively exploited flaws, while Palo Alto Networks and PostgreSQL faced severe issues that were quickly targeted by attackers. The rapid exploitation of these vulnerabilities underscores the importance of maintaining up-to-date security patches and implementing robust defensive measures.
+
+**Key trends:**
+- **Zero-day exploits**: Multiple zero-day vulnerabilities were disclosed and exploited in the wild, including those in Windows, PAN-OS, and PostgreSQL.
+- **Chained attacks**: Attackers are increasingly combining multiple vulnerabilities to achieve remote code execution and gain unauthorized access to systems.
+- **Enterprise focus**: The majority of critical vulnerabilities this week impacted enterprise-grade software, highlighting the need for stronger security practices in corporate environments.
+
+---
+
+## Recommended actions
+### [RECOMMENDATION] Prioritize Patching Critical Vulnerabilities
+1. **Microsoft Updates**: Apply February Patch Tuesday updates immediately to all Windows systems.
+2. **Palo Alto PAN-OS**: Update PAN-OS firmware to address CVE-2025-0108 and other vulnerabilities.
+3. **PostgreSQL**: Patch instances with the official updates for CVE-2025-1094.
+4. **Employee Management Systems**: Apply patches for SQL injection vulnerabilities in SourceCodester, Mayuri K, and CodeZips systems.
+
+### [RECOMMENDATION] Monitor Exploit Activity
+- Set up monitoring tools to detect any signs of exploitation related to the disclosed vulnerabilities.
+- Review network traffic for unusual patterns indicative of attack activity.
+
+### [RECOMMENDATION] Strengthen Authentication Mechanisms
+- Implement multi-factor authentication (MFA) for critical systems like PAN-OS and BeyondTrust Remote Support.
+- Regularly review and update passwords for all system accounts.
+
+---
+
+## Looking ahead
+### [PREDICTION] Increased Exploitation of PostgreSQL Zero-Day
+The disclosed PostgreSQL zero-day (CVE-2025-1094) is likely to see widespread exploitation in the coming weeks. Attackers may develop custom tools or frameworks targeting this vulnerability, particularly in financial and government sectors.
+
+### [PREDICTION] Targeted Attacks on Critical Infrastructure
+Given the success of chained attacks against PAN-OS and BeyondTrust, threat actors may turn their attention to other enterprise systems used in critical infrastructure. Organizations should prepare for potential APT campaigns leveraging similar techniques.
+
+### [ACTION] Prepare Defenses
+- Conduct a security audit focusing on database and network security.
+- Collaborate with industry peers to share intelligence on emerging threats.
+- Consider implementing zero-trust architecture to minimize the impact of successful attacks.
+
+---
+
+This week's threat landscape serves as a stark reminder of the importance of proactive security measures. Organizations must prioritize patching, monitor for exploitation activity, and adopt defensive strategies to mitigate risks in an increasingly hostile cyber environment.

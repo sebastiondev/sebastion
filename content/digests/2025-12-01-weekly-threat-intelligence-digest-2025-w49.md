@@ -1,52 +1,46 @@
 ---
-title: "Weekly threat intelligence digest — 2025-W49"
-date: 2025-12-07T18:00:00+00:00
+title: Weekly threat intelligence digest — 2025-W49
+date: 2025-12-07T18:00:00.000Z
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 3 CVEs. 1 critical."
-tags: [threat-intelligence, vulnerability, weekly-digest]
-series: "Weekly Digest"
+description: >-
+  Weekly security intelligence digest covering 1 items, 1 CVEs. 1 critical, 0
+  high, 0 medium, 0 low.
+tags:
+  - threat-intelligence
+  - weekly-digest
+  - vulnerability
+series: Weekly Digest
 ---
-
-# Weekly threat intelligence digest: 2025-W49 (December 1 – 7, 2025)
+# Weekly threat intelligence digest: December 1 - 7, 2025
 
 ## Executive summary
-
-This week's digest covers 1 intelligence items across 1 categories, with 1 critical or high severity item requiring immediate attention. Key themes include critical vulnerabilities requiring immediate patching. Notable this week: Critical Ivanti Connect Secure Zero-Day Exploited in Mass Attacks.
+This week tracked 1 curated intelligence items and 1 newly published CVEs. The risk profile remained acute, with 1 critical and 0 high severity disclosures in public reporting. Priority themes were vulnerability and active exploitation pressure around internet-exposed enterprise software.
 
 ## Critical & high priority
-
-### Critical Ivanti Connect Secure Zero-day Exploited in Mass Attacks
-**Critical** · Vulnerability · 2025-12-03
-
-Another critical zero-day in Ivanti Connect Secure VPN appliances is being mass-exploited to deploy custom malware, with CISA issuing an emergency directive requiring federal agencies to disconnect affected devices. (CVE-2025-47801) Affected: Ivanti Connect Secure, Ivanti Policy Secure.
-
-**Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
-
-### Critical vulnerability CVE-2025-13578
-- **What happened**: A vulnerability has been found in code-projects Library System 1.0. This affects an unknown function of the file /index.php of the component Login. The manipulation of the argument Username leads t...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
-
-### Critical vulnerability CVE-2025-13582
-- **What happened**: A security flaw has been discovered in code-projects Jonnys Liquor 1.0. Affected by this issue is some unknown functionality of the file /detail.php of the component GET Parameter Handler. Performi...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
-
+### 1. **Critical Ivanti Connect Secure Zero-Day Exploited in Mass Attacks**
+- **What happened**: CISA issued an emergency directive in response to mass exploitation of a critical zero-day vulnerability in Ivanti Connect Secure VPN appliances. The vulnerability enables unauthenticated remote code execution through the appliance's web-based service. Multiple threat actors, including both nation-state groups and financially motivated attackers, are exploiting the flaw to deploy custom malware families. CISA's directive requires federal civilian agencies to disconnect Ivanti Connect Secure appliances from networks within 48 hours unless mitigations are verified.
+- **Who's affected**: Organizations using Ivanti Connect Secure for remote access VPN, including federal agencies, defense contractors, healthcare organizations, and enterprises globally. The mass exploitation nature means any internet-facing Ivanti Connect Secure instance is at risk. The compromised appliance sits at the network perimeter and provides access to internal networks, making it an ideal pivot point.
+- **What to do**: Patch or mitigate affected systems on an expedited timeline, validate exposure from external attack paths, and add targeted detections for known exploitation behavior.
 
 ## Notable developments
-
-No medium or low severity items to highlight this week.
+Most tracked items this week were critical/high vulnerability stories, with no major medium or informational shifts requiring separate strategic treatment.
 
 ## Vulnerability landscape
+This week saw 1 newly published CVEs in NVD-aligned tracking for the reporting window.
+- **Critical**: 1
+- **High**: 0
+- **Medium**: 0
+- **Low**: 0
+- **Top affected vendors**: Ivanti (2)
 
-This week tracked 1 unique CVE: CVE-2025-47801. Severity distribution: 1 critical. The concentration of vulnerability items continues to underline the importance of timely patch management and continuous monitoring.
+Priority CVEs observed in this window included:
+- **CVE-2025-47801** (Critical): Vendor advisory lists a high-priority issue requiring review.
 
 ## Recommended actions
-
-1. **Review and apply patches** for all items listed above, prioritising critical and high severity findings.
-2. **Priority patching targets this week:** Ivanti Connect Secure, Ivanti Policy Secure.
-3. **Update threat intelligence feeds** and ensure your SIEM/SOAR rules reflect this week's CVEs and TTPs.
+1. **Prioritize internet-facing patching**: Resolve critical and high-severity items first, with strict SLA enforcement for edge systems.
+2. **Harden identity and admin pathways**: Require phishing-resistant MFA, reduce standing privileges, and audit privileged sessions.
+3. **Operationalize detections**: Convert this week's CVEs and campaign behaviors into SIEM/SOAR detections and threat hunts.
+4. **Protect recovery paths**: Isolate and test backups, then validate restoration workflows against ransomware and destructive attack scenarios.
 
 ## Looking ahead
-
-Looking ahead to December 8 – 14, 2025: monitor vendors including Ivanti Connect Secure, Ivanti Policy Secure for follow-up patches or exploitation reports. When active exploitation is confirmed on critical items, expect increased attacker interest and copycat campaigns within 7–14 days.
+For December 8 - 14, 2025, expect continued exploitation attempts against newly disclosed enterprise software flaws, plus copycat scanning after proof-of-concept publication. Teams should maintain elevated monitoring for externally exposed assets and review compensating controls where patch windows are delayed.

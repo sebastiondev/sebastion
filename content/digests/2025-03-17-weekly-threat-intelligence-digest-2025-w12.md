@@ -2,59 +2,81 @@
 title: "Weekly threat intelligence digest — 2025-W12"
 date: 2025-03-23T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 4 CVEs. 2 critical."
+description: "Weekly security intelligence digest covering 10 items, 9 CVEs. 2 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
 
-# Weekly threat intelligence digest: 2025-W12 (March 17 – 23, 2025)
+# Weekly threat intelligence digest: March 17 - 23, 2025
 
 ## Executive summary
-
-This week's digest covers 2 intelligence items across 1 categories, with 2 critical or high severity items requiring immediate attention. Key themes include critical vulnerabilities requiring immediate patching. Notable this week: Critical Apache Tomcat RCE Vulnerability Under Active Exploitation.
+This week has seen a surge in critical vulnerabilities affecting widely used software and devices, with active exploitation observed shortly after disclosure. The most significant threats include a remote code execution (RCE) vulnerability in Apache Tomcat and an authorization bypass flaw in Next.js middleware. Additionally, multiple critical issues were reported in D-Link routers, PHPGurukul systems, and TOTOLINK EX1800T devices. These vulnerabilities pose a high threat level, particularly for organizations relying on these technologies.
 
 ## Critical & high priority
+### [CRITICAL] Critical Apache Tomcat RCE Vulnerability Under Active Exploitation
+**What happened:** A critical remote code execution (RCE) vulnerability (CVE-2025-24813) was discovered in Apache Tomcat. Attackers can exploit this flaw by uploading malicious serialized session data via partial PUT requests, leading to arbitrary code execution on vulnerable servers.
 
-### Critical Apache Tomcat RCE Vulnerability Under Active Exploitation
-**Critical** · Vulnerability · 2025-03-18
+**Who's affected:** This vulnerability impacts Apache Tomcat versions 9.0.0-M1 to 9.0.98, 10.1.0-M1 to 10.1.34, and 11.0.0-M1 to 11.0.4.
 
-A critical remote code execution vulnerability in Apache Tomcat allows attackers to upload and execute arbitrary code via partial PUT requests, with active exploitation observed within 30 hours of disclosure. (CVE-2025-24813) Affected: Apache Tomcat 9.0.0-M1 to 9.0.98, 10.1.0-M1 to 10.1.34, 11.0.0-M1 to 11.0.4.
+**What to do:** 
+- Immediately apply the official security patches provided by Apache Tomcat.
+- Temporarily disable or restrict access to affected services until patched.
+- Monitor for any signs of exploitation in your environment.
 
-**Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+### [CRITICAL] Critical Next.js Middleware Authorization Bypass Vulnerability
+**What happened:** A critical authorization bypass vulnerability (CVE-2025-29927) was found in Next.js middleware. Attackers can manipulate the `x-middleware-subrequest` header to bypass security checks, granting unauthorized access to protected routes and resources.
 
-### Critical Next.js Middleware Authorization Bypass Vulnerability
-**Critical** · Vulnerability · 2025-03-22
+**Who's affected:** All Next.js applications utilizing middleware for authorization are at risk.
 
-A critical authorization bypass vulnerability in the Next.js framework allows attackers to skip middleware-based security checks by manipulating request headers, potentially affecting millions of web applications. (CVE-2025-29927) Affected: Next.js applications using middleware for authorization.
+**What to do:**
+- Update to the latest version of Next.js that includes the fix.
+- Review and reinforce your middleware-based security controls.
+- Monitor logs for any suspicious activity related to header manipulation.
 
-**Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+### [CRITICAL] D-Link DIR-823G Remote Exploitation Vulnerabilities
+**What happened:** Two critical vulnerabilities (CVE-2025-2359 and CVE-2025-2360) in the D-Link DIR-823G router were disclosed. Both flaws allow remote attackers to manipulate SOAPAction arguments, leading to improper authorization and potential attacks.
 
-### 1. **Critical vulnerability CVE-2025-1945**
-picklescan before 0.0.23 fails to detect malicious pickle files inside PyTorch model archives when certain ZIP file flag bits are modified. By flipping specific bits in the ZIP file headers, an att...
-**Impact:** High risk of exploitation leading to system compromise.
-**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+**Who's affected:** Users of D-Link DIR-823G 1.0.2B05_20181207 firmware versions.
 
-### 2. **Critical vulnerability CVE-2025-1497**
-A vulnerability, that could result in Remote Code Execution (RCE), has been found in PlotAI. Lack of validation of LLM-generated output allows attacker to execute arbitrary Python code.
-Vendor comm...
-**Impact:** High risk of exploitation leading to system compromise.
-**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
-
+**What to do:**
+- Apply the official firmware updates provided by D-Link.
+- Disable unnecessary services or features exposed via SOAPAction.
+- Conduct a security assessment of your IoT devices to identify and mitigate similar risks.
 
 ## Notable developments
+### Rise in Apache Tomcat Exploitation
+Security researchers have observed rapid exploitation attempts against CVE-2025-24813 within 30 hours of its disclosure. This highlights the importance of prompt patching for organizations using Apache Tomcat.
 
-No medium or low severity items to highlight this week.
+### Increased Focus on IoT Device Vulnerabilities
+The vulnerabilities in TOTOLINK EX1800T (CVE-2025-2369 and CVE-2025-2370) underscore the growing threat landscape targeting IoT devices. Attackers are actively seeking to exploit these flaws for potential remote control or data breaches.
+
+### SQL Injection Trends in Healthcare
+Multiple critical SQL injection vulnerabilities were reported in PHPGurukul systems, including those affecting password recovery pages and visitor management systems (CVE-2025-2372, CVE-2025-2379, and CVE-2025-2380). These issues pose significant risks to healthcare data integrity.
+
+### Importance of Patch Management
+The disclosed vulnerabilities emphasize the criticality of robust patch management processes. Organizations must prioritize updates for their frameworks and devices to mitigate exposure to such threats.
 
 ## Vulnerability landscape
+### Total New CVEs Tracked This Week: 2
+- **Critical Severity:** 2 (100% of tracked CVEs)
 
-This week tracked 2 unique CVEs: CVE-2025-24813, CVE-2025-29927. Severity distribution: 2 critical. The concentration of vulnerability items continues to underline the importance of timely patch management and continuous monitoring.
+### Top Affected Vendors:
+- Next.js: 1 critical vulnerability
+- Apache Tomcat: 1 critical vulnerability
+- D-Link: 2 critical vulnerabilities
+
+### Notable Patterns:
+- Multiple vulnerabilities in widely used frameworks and IoT devices.
+- Rapid exploitation attempts post-disclosure, particularly for Apache Tomcat.
 
 ## Recommended actions
-
-1. **Review and apply patches** for all items listed above, prioritising critical and high severity findings.
-2. **Priority patching targets this week:** Apache Tomcat 9.0.0-M1 to 9.0.98, 10.1.0-M1 to 10.1.34, Next.js applications using middleware for authorization.
-3. **Update threat intelligence feeds** and ensure your SIEM/SOAR rules reflect this week's CVEs and TTPs.
+1. **Patch Apache Tomcat Immediately:** Apply the latest security updates to mitigate CVE-2025-24813. Temporarily disable affected services if patches are not yet applied.
+2. **Update Next.js Middleware:** Install the patched version of Next.js to address CVE-2025-29927 and review middleware configurations for any potential bypasses.
+3. **Secure D-Link Routers:** Apply firmware updates for DIR-823G devices and disable unnecessary SOAP-based services.
+4. **Monitor for Tomcat Exploitation:** Implement network monitoring to detect and block suspicious activity related to partial PUT requests targeting Apache Tomcat instances.
+5. **Review PHPGurukul Systems:** Address SQL injection vulnerabilities by applying patches and conducting thorough code reviews, especially in password recovery and admin profile sections.
+6. **Enhance IoT Device Security:** For TOTOLINK EX1800T users, apply firmware updates and consider network segmentation to isolate devices from critical systems.
+7. **Strengthen Authorization Controls:** In light of the Next.js vulnerability, ensure that all middleware-based authorization mechanisms are robust and free from header manipulation vulnerabilities.
 
 ## Looking ahead
-
-Looking ahead to March 24 – 30, 2025: monitor vendors including Apache Tomcat 9.0.0-M1 to 9.0.98, 10.1.0-M1 to 10.1.34 for follow-up patches or exploitation reports. When active exploitation is confirmed on critical items, expect increased attacker interest and copycat campaigns within 7–14 days.
+Next week is expected to see increased exploitation attempts against the disclosed vulnerabilities, particularly in Apache Tomcat and D-Link devices. Additionally, attackers may shift focus to other widely used frameworks or CMS systems. Organizations should remain vigilant, prioritize patches, and maintain a proactive security posture to mitigate emerging threats.

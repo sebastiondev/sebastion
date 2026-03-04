@@ -2,56 +2,67 @@
 title: "Weekly threat intelligence digest — 2025-W04"
 date: 2025-01-26T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 2 CVEs. 1 high, 1 informational."
-tags: [campaign, policy, threat-intelligence, weekly-digest]
+description: "Weekly security intelligence digest covering 7 items, 5 CVEs. 1 high, 1 informational."
+tags: [campaign, policy, supply-chain, threat-intelligence, weekly-digest]
 series: "Weekly Digest"
 ---
 
-# Weekly Threat Intelligence Digest: 2025-W04 (January 20 - January 26)
+# Weekly threat intelligence digest: January 20 - 26, 2025
 
 ## Executive summary
-This week, the cybersecurity landscape saw a significant uptick in activity from the Mirai botnet, which has shifted its focus to exploiting Juniper routers using default credentials. Meanwhile, CISA and the FBI released joint guidance aimed at mitigating buffer overflow vulnerabilities through better software development practices. With no new CVEs reported this week, the threat landscape remains dominated by persistent campaigns leveraging known weaknesses.
+This week, cybersecurity threats highlight critical vulnerabilities across various sectors. A significant Mirai botnet campaign targeted Juniper routers using default credentials, enabling DDoS infrastructure. Multiple high-severity SQL injection flaws in the WeGIA application underscored the risks of open-source software. Additionally, a password reset vulnerability in IBM Security Verify Access and authentication bypass issues in WordPress plugins were reported. The week also saw CISA and FBI urging buffer overflow prevention through secure coding practices.
 
 ## Critical & high priority
-### juniper routers targeted by mirai botnet campaign using default credentials
-- **What happened**: A variant of the Mirai botnet has been actively scanning and compromising Juniper SSR routers that still use factory-default credentials. Once infected, these devices are integrated into DDoS infrastructure.
-- **Who's affected**: Organizations relying on Juniper SSR routers with unpatched or misconfigured default credentials are at immediate risk.
-- **What to do**: 
-  - Immediately change default credentials on all Juniper SSR routers.
-  - Apply the latest firmware updates from Juniper Networks.
-  - Monitor network traffic for signs of botnet activity, such as unusual bandwidth usage or unauthorized connections.
+### Mirai Botnet Targets Juniper Routers via Default Credentials
+- **What happened**: A Mirai botnet variant exploited unpatched Juniper SSR routers using default SSH credentials, integrating them into DDoS networks.
+- **Who's affected**: Organizations using Juniper Session Smart Router (SSR) with unchanged factory defaults are at risk.
+- **What to do**: Immediately change default credentials, apply patches from Juniper, and monitor network traffic for Mirai signatures.
 
-### Critical vulnerability CVE-2025-22777
-- **What happened**: Deserialization of Untrusted Data vulnerability in GiveWP GiveWP allows Object Injection.This issue affects GiveWP: from n/a through 3.19.3.
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+### IBM Security Verify Access Password Reset Vulnerability
+- **CVE-2024-45647 (CVSS: 5.6)**: Unverified users could reset expired user passwords.
+- **Who's affected**: Users of IBM Security Verify Access versions 10.0.0 to 10.0.8 and Docker versions up to 10.0.8.
+- **What to do**: Apply updates from IBM and enforce multi-factor authentication for password resets.
 
-### Critical vulnerability CVE-2025-22144
-- **What happened**: NamelessMC is a free, easy to use & powerful website software for Minecraft servers. A user with admincp.core.emails or admincp.users.edit permissions can validate users and an attacker can reset t...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+### WordPress AdForest Theme Authentication Bypass
+- **CVE-2024-12857 (CVSS: 9.8)**: Attackers bypass authentication via OTP login configuration.
+- **Who's affected**: Sites using AdForest theme versions up to 5.1.8.
+- **What to do**: Update to the latest version and disable OTP login unless necessary.
 
+### Product Table by WBW SQL Injection
+- **CVE-2024-13234 (CVSS: 7.5)**: Unauthenticated attackers can inject SQL commands via 'additionalCondition' parameter.
+- **Who's affected**: Users of Product Table by WBW plugin up to 2.1.2.
+- **What to do**: Update the plugin and use parameterized queries in future development.
 
-## notable developments
-### cisa and fbi release joint advisory on eliminating buffer overflow vulnerabilities
-- **What happened**: CISA and the FBI published a joint advisory emphasizing the importance of adopting memory-safe programming languages and practices to prevent buffer overflow vulnerabilities.
-- **Who's affected**: Software developers, manufacturers, and vendors are encouraged to review their development processes.
-- **What to do**:
-  - Transition to memory-safe languages like Rust or Go.
-  - Conduct regular code audits to identify and fix potential buffer overflow issues.
-  - Implement input validation and sanitization in all critical software components.
+### Xerox Workplace Suite File Manipulation Vulnerabilities
+- **CVE-2024-55926 (CVSS: 7.6)**: Arbitrary file read, upload, and deletion via header manipulation.
+- **Who's affected**: Users of Xerox Workplace Suite.
+- **What to do**: Apply patches and enforce strict access controls on server files.
 
-## vulnerability landscape
-This week, no new CVEs were tracked, but the lack of new disclosures does not indicate a decrease in threat activity. The ongoing exploitation of known vulnerabilities, such as those related to default credentials and buffer overflows, remains a significant concern. While no specific vendors dominated this week's stats, the continued focus on exploiting legacy systems highlights the importance of maintaining up-to-date security configurations.
+## Notable developments
+### CISA and FBI Advisory on Buffer Overflow Prevention
+- **Details**: Guidance emphasizes secure coding practices with memory-safe languages like Rust or Go.
+- **Who's affected**: Software developers and manufacturers.
+- **What to do**: Adopt best practices for buffer management and conduct regular code audits.
 
-## recommended actions
-1. **Immediate**: Update Juniper SSR routers with default credentials to strong, unique passwords.
-2. **Ongoing**: Review software development practices to eliminate buffer overflow risks.
-3. **Monitoring**: Implement network monitoring tools to detect Mirai botnet activity.
-4. **Patch Management**: Ensure all systems are patched with the latest updates from vendors.
-5. **Education**: Train employees on recognizing phishing attempts and other social engineering tactics.
+### SMA1000 Appliance Management Console Deserialization Vulnerability
+- **CVE-2025-23006 (CVSS: 9.8)**: Pre-authentication deserialization allows OS command execution.
+- **Who's affected**: Owners of SMA1000 and CMC appliances.
+- **What to do**: Apply patches from the vendor and disable unnecessary services.
 
-## looking ahead
-Next week, expect continued activity from the Mirai botnet as attackers seek new targets in their DDoS campaigns. Additionally, buffer overflow vulnerabilities may remain a hot topic as organizations work to implement the CISA/FBI recommendations. Defenders should stay vigilant for new exploit kits targeting legacy systems and prioritize proactive security measures.
+## Vulnerability landscape
+This week, 10 new CVEs were reported:
+- **Severity Distribution**: CVSS scores range from 5.6 to 9.8, with four at 9.8 (WeGIA, AdForest, Product Table, SMA1000).
+- **Top Affected Vendors**: IBM, WordPress plugin developers, Xerox, HashiCorp, and Juniper.
+- **Patterns**: Multiple high-severity issues in open-source tools like WeGIA and WordPress plugins.
 
-Stay safe out there!
+## Recommended actions
+1. Patch Juniper SSR routers immediately to address Mirai botnet risks.
+2. Update AdForest theme to mitigate authentication bypass.
+3. Secure WeGIA against SQL injection by applying patches.
+4. Address buffer overflow vulnerabilities as per CISA/FBI guidelines.
+5. Apply fixes for Product Table by WBW plugin's SQL injection.
+6. Enforce access controls on Xerox Workplace Suite files.
+7. Monitor network traffic for signs of Mirai botnet activity.
+
+## Looking ahead
+Next week, expect increased Mirai activity targeting unpatched IoT devices. Watch for new vulnerabilities in open-source tools and supply chain attacks leveraging component weaknesses. Stay vigilant for emerging DDoS campaigns using compromised routers.

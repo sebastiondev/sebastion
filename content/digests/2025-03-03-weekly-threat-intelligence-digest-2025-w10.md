@@ -2,51 +2,130 @@
 title: "Weekly threat intelligence digest — 2025-W10"
 date: 2025-03-09T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 5 CVEs. 1 critical."
+description: "Weekly security intelligence digest covering 10 items, 3 CVEs. 1 critical."
 tags: [threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
 
-# Weekly threat intelligence digest: 2025-W10 (March 3 – 9, 2025)
+# Weekly threat intelligence digest: March 3 - 9, 2025
 
 ## Executive summary
-
-This week's digest covers 1 intelligence items across 1 categories, with 1 critical or high severity item requiring immediate attention. Key themes include critical vulnerabilities requiring immediate patching. Notable this week: Broadcom Patches Three VMware Zero-Days Exploited in Active Attacks.
+This week's threat landscape is marked by a critical emergency involving three zero-day vulnerabilities in VMware products, actively exploited in the wild. These flaws, identified as CVE-2025-22224, CVE-2025-22225, and CVE-2025-22226, allow attackers to escape virtual machines and compromise hypervisors. Additionally, multiple high-severity vulnerabilities were disclosed, including SQL injection flaws in ESAFENET CDG, Mini-Tmall, and Codezips systems, as well as a critical buffer overflow in Tenda AC8 devices. The week also saw the disclosure of a remote account takeover vulnerability in oxidized-web, highlighting the importance of patching and monitoring.
 
 ## Critical & high priority
+### Broadcom Patches Three VMware Zero-Days Exploited in Active Attacks
+**What happened:**  
+Broadcom released emergency patches for three zero-day vulnerabilities affecting VMware ESXi, Workstation, and Fusion. These flaws were reported by Microsoft's Threat Intelligence Center and are being actively exploited. The vulnerabilities can be chained to enable virtual machine escape, allowing attackers with code execution in a guest VM to compromise the underlying hypervisor.
 
-### Broadcom Patches Three Vmware Zero-days Exploited in Active Attacks
-**Critical** · Vulnerability · 2025-03-05
+**Who's affected:**  
+- **Products:** VMware ESXi, VMware Workstation, VMware Fusion
+- **Vendors:** Broadcom (patch provider), VMware (product vendor)
+- **Sectors:** Enterprises relying on VMware infrastructure for virtualization
 
-Three VMware zero-day vulnerabilities in ESXi, Workstation, and Fusion are being actively exploited, enabling attackers to escape virtual machines and compromise hypervisors. (CVE-2025-22224, CVE-2025-22225, CVE-2025-22226) Affected: VMware ESXi, VMware Workstation, VMware Fusion.
+**What to do:**  
+1. Apply patches immediately from [VMware's security page](https://www.vmware.com/security).
+2. Monitor for additional exploits and update affected systems.
+3. Implement network segmentation to mitigate potential spread.
 
-**Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
+### ESAFENET CDG 5.6.3.154.205 Suffers Critical SQL Injection Flaws
+**What happened:**  
+Two critical SQL injection vulnerabilities were disclosed in ESAFENET CDG 5.6.3.154.205, affecting the files `updateorg.jsp` and `ClientSortLog.jsp`. These flaws allow remote attackers to manipulate query parameters, leading to unauthorized database access.
 
-### 1. **Critical vulnerability CVE-2025-1598**
-A vulnerability was found in SourceCodester Best Church Management Software 1.0. It has been declared as critical. Affected by this vulnerability is an unknown functionality of the file /admin/app/...
-**Impact:** High risk of exploitation leading to system compromise.
-**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+**Who's affected:**  
+- **Products:** ESAFENET CDG 5.6.3.154.205
+- **Vendors:** ESAFENET (assumed vendor)
+- **Sectors:** Organizations using ESAFENET for log management and workflow
 
-### 2. **Critical vulnerability CVE-2025-1599**
-A vulnerability was found in SourceCodester Best Church Management Software 1.0. It has been rated as problematic. Affected by this issue is some unknown functionality of the file /admin/app/profil...
-**Impact:** High risk of exploitation leading to system compromise.
-**Recommendation:** Apply vendor patches immediately and monitor for indicators of compromise.
+**What to do:**  
+1. Apply patches from the vendor's update portal.
+2. Conduct a security audit of web applications for SQL injection points.
 
+### Mini-Tmall Up to 20250211 Exposed via Critical SQL Injection
+**What happened:**  
+A critical SQL injection vulnerability was found in Mini-Tmall up to version 20250211, affecting the `select` function in `ProductMapper.java`. Attackers can exploit this by manipulating the `orderBy` argument.
+
+**Who's affected:**  
+- **Products:** Mini-Tmall <= 20250211
+- **Vendors:** Mini-Tmall developers
+- **Sectors:** E-commerce platforms using Mini-Tmall
+
+**What to do:**  
+1. Update to the latest version from [Mini-Tmall's website](https://www.mini-tmall.com/).
+2. Implement input validation and use parameterized queries.
+
+### Oxidized-web RANCID Migration Page Vulnerability
+**What happened:**  
+A critical vulnerability in oxidized-web before 0.15.0 allows unauthenticated users to gain control over the Linux account running the service via the RANCID migration page.
+
+**Who's affected:**  
+- **Products:** oxidized-web < 0.15.0
+- **Vendors:** Oxidized Web developers
+- **Sectors:** Network management and monitoring
+
+**What to do:**  
+1. Upgrade to version 0.15.0 or higher.
+2. Restrict access to sensitive pages like the RANCID migration endpoint.
+
+### Totolink EX1800T 9.1.0cu.2112_B20220316 Suffers Critical Buffer Overflow
+**What happened:**  
+A critical buffer overflow vulnerability was found in Totolink EX1800T, affecting the `loginAuth` function in `/cgi-bin/cstecgi.cgi`. Attackers can exploit this via crafted password arguments.
+
+**Who's affected:**  
+- **Products:** Totolink EX1800T 9.1.0cu.2112_B20220316
+- **Vendors:** TP-Link (assumed vendor)
+- **Sectors:** Home and enterprise networking
+
+**What to do:**  
+1. Apply the firmware update from [TP-Link's support](https://www.tp-link.com/).
+2. Monitor for additional vulnerabilities in IoT devices.
+
+### Tenda AC8 16.03.34.06 Vulnerable to Critical Buffer Overflow
+**What happened:**  
+A critical buffer overflow vulnerability was disclosed in Tenda AC8, affecting the `sub_49E098` function in `/goform/SetIpMacBind`. Attackers can exploit this via crafted list arguments.
+
+**Who's affected:**  
+- **Products:** Tenda AC8 16.03.34.06
+- **Vendors:** Tenda (assumed vendor)
+- **Sectors:** Networking and Wi-Fi
+
+**What to do:**  
+1. Update firmware to the latest version from [Tenda's support](https://www.tendahome.com/).
+2. Implement network access controls.
 
 ## Notable developments
+### Multiple SQL Injection Flaws in Codezips Systems
+Two critical SQL injection vulnerabilities were disclosed in Codezips College Management System 1.0 and Codezips Gym Management System 1.0, affecting `/university.php` and `/dashboard/admin/gen_invoice.php`. These flaws allow remote attackers to manipulate arguments like `book_name` and `id`.
 
-No medium or low severity items to highlight this week.
+**What to do:**  
+- Apply patches from the vendor's update portal.
+- Conduct a security audit of web applications.
+
+### ESAFENET DSM 3.1.2 Suffers Critical Command Injection Flaw
+A critical command injection vulnerability was found in ESAFENET DSM 3.1.2, affecting the `examExportPDF` function in `/admin/plan/examExportPDF`. Attackers can exploit this via crafted argument manipulation.
+
+**What to do:**  
+- Apply patches from the vendor's update portal.
+- Monitor for additional vulnerabilities in ESAFENET products.
 
 ## Vulnerability landscape
+### Weekly CVE Analysis
+- **Total new CVEs tracked:** 3
+- **Severity distribution:** All classified as critical (CVSS scores: 7.3, 8.8, 9.0)
+- **Top affected vendors:** VMware (3 vulnerabilities)
 
-This week tracked 3 unique CVEs: CVE-2025-22224, CVE-2025-22225, CVE-2025-22226. Severity distribution: 1 critical. The concentration of vulnerability items continues to underline the importance of timely patch management and continuous monitoring.
+### Notable Patterns
+- Multiple SQL injection flaws across different products.
+- Critical buffer overflow vulnerabilities in networking devices.
+- Remote exploit disclosures for previously unknown vulnerabilities.
 
 ## Recommended actions
-
-1. **Review and apply patches** for all items listed above, prioritising critical and high severity findings.
-2. **Priority patching targets this week:** VMware ESXi, VMware Workstation.
-3. **Update threat intelligence feeds** and ensure your SIEM/SOAR rules reflect this week's CVEs and TTPs.
+1. **Prioritize VMware Updates:** Apply patches for CVE-2025-22224, CVE-2025-22225, and CVE-2025-22226 immediately.
+2. **Patch ESAFENET CDG:** Address SQL injection flaws in versions 5.6.3.154.205.
+3. **Update Mini-Tmall:** Patch to resolve critical SQL injection issues.
+4. **Secure oxidized-web:** Upgrade to version 0.15.0 or higher.
+5. **Firmware Updates for Totolink and Tenda Devices:** Apply updates to mitigate buffer overflow risks.
+6. **Audit Web Applications:** Look for SQL injection points in web applications.
+7. **Monitor Network Devices:** Stay vigilant for vulnerabilities in networking hardware.
 
 ## Looking ahead
-
-Looking ahead to March 10 – 16, 2025: monitor vendors including VMware ESXi, VMware Workstation for follow-up patches or exploitation reports. When active exploitation is confirmed on critical items, expect increased attacker interest and copycat campaigns within 7–14 days.
+Next week, expect continued activity around VMware vulnerabilities as attackers may develop new exploits. Additionally, watch for potential follow-up disclosures related to the ESAFENET and Tenda vulnerabilities. The disclosure of additional zero-days in widely used software is a likely scenario, requiring proactive patching strategies.

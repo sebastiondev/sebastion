@@ -1,49 +1,41 @@
 ---
-title: "Weekly threat intelligence digest — 2025-W31"
-date: 2025-08-03T18:00:00+00:00
+title: Weekly threat intelligence digest — 2025-W31
+date: 2025-08-03T18:00:00.000Z
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 2 CVEs. 1 informational."
-tags: [policy, threat-intelligence, vulnerability, weekly-digest]
-series: "Weekly Digest"
+description: >-
+  Weekly security intelligence digest covering 1 items, 0 CVEs. 0 critical, 0
+  high, 0 medium, 0 low.
+tags:
+  - threat-intelligence
+  - weekly-digest
+  - vulnerability
+  - policy
+series: Weekly Digest
 ---
-
-# Weekly threat intelligence digest: 2025-W31 (July 28 – August 3, 2025)
+# Weekly threat intelligence digest: July 28 - August 3, 2025
 
 ## Executive summary
-
-This week's digest covers 1 intelligence items, with no critical or high severity items. The week was characterised by policy and regulatory developments. Defenders should review the notable developments below and maintain standard vigilance.
+This week tracked 1 curated intelligence items and 0 newly published CVEs. The risk profile remained elevated, with 0 critical and 0 high severity disclosures in public reporting. Priority themes were policy and active exploitation pressure around internet-exposed enterprise software.
 
 ## Critical & high priority
-
-No critical or high severity items this week.
-
-### Critical vulnerability CVE-2025-7915
-- **What happened**: A vulnerability was found in Chanjet CRM 1.0 and classified as critical. Affected by this issue is some unknown functionality of the file /mail/mailinactive.php of the component Login Page. The man...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
-
-### Critical vulnerability CVE-2024-6107
-- **What happened**: Due to insufficient verification, an attacker could use a malicious client to bypass authentication checks and run RPC commands in a region. This has been addressed in MAAS and updated in the corre...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
-
+No critical or high-severity intelligence items were published in this week. Continue normal patch and monitoring cadence, with emphasis on externally reachable systems.
 
 ## Notable developments
-
-### Google Cloud Mandates Multi-factor Authentication for All Accounts
-**Informational** · Policy · 2025-07-28
-
-Google Cloud began enforcing mandatory multi-factor authentication for all user accounts, completing a phased rollout that started in late 2024 and affecting millions of cloud platform users worldwide.
+### 1. **Google Cloud Mandates Multi-Factor Authentication for All Accounts**
+- Google Cloud began enforcing mandatory multi-factor authentication for all user accounts, completing a phased rollout that started in late 2024 and affecting millions of cloud platform users worldwide.
 
 ## Vulnerability landscape
-
-No CVE identifiers were linked to this week's items. Severity distribution: 1 informational. The lower severity profile this week suggests a relatively quiet period, though defenders should not become complacent.
+This week saw 0 newly published CVEs in NVD-aligned tracking for the reporting window.
+- **Critical**: 0
+- **High**: 0
+- **Medium**: 0
+- **Low**: 0
 
 ## Recommended actions
-
-1. **Review and apply patches** for all items listed above, prioritising critical and high severity findings.
-2. **Update threat intelligence feeds** and ensure your SIEM/SOAR rules reflect this week's CVEs and TTPs.
+1. **Prioritize internet-facing patching**: Resolve critical and high-severity items first, with strict SLA enforcement for edge systems.
+2. **Harden identity and admin pathways**: Require phishing-resistant MFA, reduce standing privileges, and audit privileged sessions.
+3. **Operationalize detections**: Convert this week's CVEs and campaign behaviors into SIEM/SOAR detections and threat hunts.
+4. **Protect recovery paths**: Isolate and test backups, then validate restoration workflows against ransomware and destructive attack scenarios.
 
 ## Looking ahead
-
-Looking ahead to August 4 – 10, 2025: expect continued monitoring of items from this week as they mature. The relatively quiet threat landscape this week may precede a higher-activity period — maintain standard review cadence.
+For August 4 - 10, 2025, expect continued exploitation attempts against newly disclosed enterprise software flaws, plus copycat scanning after proof-of-concept publication. Teams should maintain elevated monitoring for externally exposed assets and review compensating controls where patch windows are delayed.

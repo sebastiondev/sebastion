@@ -7,15 +7,14 @@ tags: [campaign, malware, supply-chain, threat-intelligence, vulnerability, week
 series: "Weekly Digest"
 ---
 
-# Weekly Threat Intelligence Digest: February 27 - March 5, 2026  
+# Weekly threat intelligence digest: February 27 - March 5, 2026  
 
-## executive summary  
+## Executive summary
 This week saw a surge in critical vulnerabilities across multiple industries, including electric vehicle (EV) charging stations, industrial control systems, and AI gateways. Malicious actors demonstrated increased sophistication, targeting air-gapped networks and exploiting third-party software weaknesses. A notable data exposure incident in South Korea highlighted the risks of poor security practices in government agencies. Defenders must prioritize patching and monitoring to mitigate these threats.
 
 ---
 
-## critical & high priority  
-
+## Critical & high priority
 ### 1. **Critical Vulnerabilities in EV Energy Charging Stations**  
 - **What happened**: Multiple critical vulnerabilities were discovered in EV Energy's charging stations, allowing attackers to gain administrative control or disrupt services. These flaws pose significant risks to the growing EV infrastructure.  
 - **Who’s affected**: EV charging networks and electric vehicle users relying on these stations.  
@@ -38,8 +37,7 @@ This week saw a surge in critical vulnerabilities across multiple industries, in
 
 ---
 
-## notable developments  
-
+## Notable developments
 ### 1. **Windows 11 Enhances Batch File Security**  
 - Microsoft introduced improvements in Windows 11 Insider Preview builds to mitigate script-based attacks via batch files and CMD scripts. This move addresses a common attack vector for malicious actors.  
 
@@ -48,8 +46,7 @@ This week saw a surge in critical vulnerabilities across multiple industries, in
 
 ---
 
-## vulnerability landscape  
-
+## Vulnerability landscape
 This week saw a sharp increase in tracked CVEs, with 332 new vulnerabilities reported. The severity distribution highlights:  
 - **Critical**: 57 (17%)  
 - **High**: 185 (56%)  
@@ -65,8 +62,7 @@ The trend suggests a growing focus on industrial and IoT systems, with vulnerabi
 
 ---
 
-## recommended actions  
-
+## Recommended actions
 1. **Patch Critical Vulnerabilities**: Prioritize updates for Copeland XWEB devices, EV Energy charging stations, and any other systems with known critical flaws.  
 2. **Monitor Air-Gap Networks**: Implement additional security measures for air-gapped environments to counter APT37’s new malware capabilities.  
 3. **Secure Third-Party Software**: Regularly update third-party tools like PDF readers and email clients, and consider adopting zero-trust policies.  
@@ -74,8 +70,7 @@ The trend suggests a growing focus on industrial and IoT systems, with vulnerabi
 
 ---
 
-## looking ahead  
-
+## Looking ahead
 Next week, expect:  
 - More vulnerabilities in industrial control systems (ICS) as attackers target critical infrastructure.  
 - Increased activity from APT37 and similar groups targeting air-gapped networks.  

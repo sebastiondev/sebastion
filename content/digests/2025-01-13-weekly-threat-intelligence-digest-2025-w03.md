@@ -2,52 +2,86 @@
 title: "Weekly threat intelligence digest — 2025-W03"
 date: 2025-01-19T18:00:00+00:00
 author: sebastion
-description: "Weekly security intelligence digest covering 4 items, 10 CVEs. 3 critical, 1 high."
-tags: [campaign, policy, threat-intelligence, vulnerability, weekly-digest]
+description: "Weekly security intelligence digest covering 7 items, 12 CVEs. 3 critical, 1 high."
+tags: [campaign, policy, supply-chain, threat-intelligence, vulnerability, weekly-digest]
 series: "Weekly Digest"
 ---
 
-# Weekly Threat Intelligence Digest: 2025-W03 (January 13-19)
+# Weekly threat intelligence digest: January 13 - 19, 2025
 
-## Executive Summary
-This week has been marked by critical vulnerabilities and significant security events. The Fortinet FortiOS authentication bypass is under active exploitation, granting attackers super-admin access. Microsoft's Patch Tuesday addressed eight zero-days, three of which are exploited in Windows Hyper-V. A major data breach at PowerSchool exposed student and staff records, while CISA issued an emergency directive for Ivanti vulnerabilities due to nation-state exploitation.
+## Executive summary
+This week saw a surge in critical vulnerabilities across major enterprise products, with active exploitation targeting FortiOS/Proxy authentication bypass, Windows Hyper-V zero-days, and Ivanti Connect Secure flaws. Microsoft's Patch Tuesday addressed eight zero-day vulnerabilities, while PowerSchool faced a significant data breach affecting K-12 districts. CISA issued an emergency directive to mitigate Ivanti vulnerabilities exploited by nation-state actors.
 
-## Critical & High Priority
+## Critical & high priority
+### [CRITICAL] Fortinet FortiOS Authentication Bypass Under Active Exploitation
+**What happened:**  
+A critical authentication bypass vulnerability (CVE-2024-55591) in FortiOS and FortiProxy was actively exploited. Attackers used crafted requests to the Node.js websocket module, gaining super-admin privileges on firewalls.
 
-### Fortinet FortiOS Authentication Bypass (CVE-2024-55591)
-A critical authentication bypass in FortiOS and FortiProxy allows remote attackers to gain super-admin privileges. **What happened:** Attackers can exploit this flaw to bypass authentication, leading to unauthorized access. **Who's affected:** Organizations using FortiOS or FortiProxy are at risk. **What to do:** Apply patches immediately and monitor for signs of compromise.
+**Who's affected:**  
+- **Products:** FortiOS 7.0.0-7.0.16, FortiProxy 7.0.0-7.0.19, FortiProxy 7.2.0-7.2.12
+- **Sectors:** Enterprises relying on Fortinet's firewall solutions
 
-### Microsoft January 2025 Patch Tuesday
-Addressing eight zero-day vulnerabilities in Windows Hyper-V and components, three under active exploitation. **What happened:** These flaws could allow remote code execution or elevation of privilege. **Who's affected:** Users of Windows and related services. **What to do:** Prioritize updates for critical systems.
+**What to do:**  
+Apply patches immediately and disable websocket services if not in use.
 
-### PowerSchool Data Breach
-Exposed personal data of students and staff across K-12 districts in North America. **What happened:** Attackers gained unauthorized access to sensitive information. **Who's affected:** Schools using PowerSchool. **What to do:** Secure exposed records and notify affected individuals.
+### [CRITICAL] Microsoft January 2025 Patch Tuesday Addresses Eight Zero-Day Vulnerabilities
+**What happened:**  
+Microsoft patched 159 vulnerabilities, including eight zero-days. Three were exploited in Windows Hyper-V (CVE-2025-21333, CVE-2025-21334, CVE-2025-21335).
 
-### CISA Emergency Directive for Ivanti Connect Secure
-Targeting federal agencies due to nation-state exploitation. **What happened:** Two vulnerabilities allow privilege escalation and data exfiltration. **Who's affected:** Federal agencies using Ivanti software. **What to do:** Implement patches and enhance monitoring.
+**Who's affected:**  
+- **Products:** Windows 10/11, Server 2022/2025, Microsoft Office
+- **Sectors:** All Windows users
 
-### Critical vulnerability CVE-2024-13144
-- **What happened**: A vulnerability classified as critical has been found in zhenfeng13 My-Blog 1.0. Affected is the function uploadFileByEditomd of the file src/main/java/com/site/blog/my/core/controller/admin/BlogCo...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+**What to do:**  
+Install updates immediately and monitor for exploitation attempts.
 
-### Critical vulnerability CVE-2024-13145
-- **What happened**: A vulnerability classified as critical was found in zhenfeng13 My-Blog 1.0. Affected by this vulnerability is the function upload of the file src/main/java/com/site/blog/my/core/controller/admin/up...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
+### [HIGH] PowerSchool Data Breach Exposes Student and Staff Records
+**What happened:**  
+Attackers accessed PowerSchool's SIS platform via a customer support portal, exfiltrating student and staff data.
 
+**Who's affected:**  
+- **Products:** PowerSchool SIS
+- **Sectors:** K-12 school districts in US/Canada
 
-## Notable Developments
-This week saw no new CVEs tracked, indicating a focus on exploiting known vulnerabilities. The PowerSchool breach underscores the need for robust third-party vendor security practices.
+**What to do:**  
+Review access controls and implement MFA for sensitive portals.
 
-## Vulnerability Landscape
-No new CVEs were added this week. Critical vulnerabilities dominated, with Fortinet, Microsoft, and Ivanti as top affected vendors. This highlights the importance of proactive patching and threat monitoring.
+### [CRITICAL] CISA Issues Emergency Directive for Ivanti Connect Secure Vulnerabilities
+**What happened:**  
+CISA mandated action against CVE-2025-0282 in Ivanti Connect Secure, exploited by nation-state actors.
 
-## Recommended Actions
-- **FortiOS Users:** Apply patches immediately and monitor for unauthorized access.
-- **Microsoft Users:** Update systems post-Patch Tuesday and prioritize zero-day fixes.
-- **Educational Institutions:** Secure data exposed in the PowerSchool breach and review third-party vendor policies.
-- **Federal Agencies:** Mitigate Ivanti vulnerabilities as per CISA directives.
+**Who's affected:**  
+- **Products:** Ivanti Connect Secure and Policy Secure
+- **Sectors:** US Federal agencies
 
-## Looking Ahead
-Expect continued focus on Microsoft products, potentially more zero-days. Monitor for new exploits post-Patch Tuesday and stay vigilant against supply chain attacks following the PowerSchool breach.
+**What to do:**  
+Apply patches and monitor for additional exploitation attempts.
+
+## Notable developments
+### Additional Critical CVEs Identified
+- **CVE-2025-22777 (GiveWP):** Deserialization flaw allowing object injection.
+- **CVE-2025-22144 (NamelessMC):** Password reset code bypass via admin permissions.
+- **CVE-2024-56323 (OpenFGA):** Authorization bypass under specific conditions.
+- **CVE-2025-0061 (SAP BusinessObjects):** Session hijacking vulnerability.
+
+### Fortinet's Ongoing Vulnerability Issues
+Fortinet products saw multiple CVEs, including authentication weaknesses and weak encryption practices.
+
+## Vulnerability landscape
+### Analysis of This Week's CVE Trends
+- **Total New CVEs:** 7
+- **Severity Distribution:** All critical.
+- **Top Affected Vendors:** Windows (5), Microsoft (5), FortiProxy/FortiOS (1 each).
+- **Patterns:** Multiple zero-days in enterprise products, active exploitation across sectors.
+
+## Recommended actions
+1. **Patch FortiOS/Proxy Immediately:** Address CVE-2024-55591 to prevent super-admin access.
+2. **Apply Microsoft Updates:** Prioritize fixes for Windows Hyper-V and other Patch Tuesday updates.
+3. **Secure PowerSchool Access:** Review third-party integrations and implement MFA.
+4. **Comply with CISA Directive:** Mitigate Ivanti vulnerabilities as per emergency guidelines.
+5. **Monitor GiveWP/NamelessMC Flaws:** Apply patches to prevent deserialization and code bypass issues.
+6. **Address SAP Session Hijacking:** Implement multi-factor authentication for sensitive applications.
+7. **Investigate FortiManager Vulnerabilities:** Monitor for exploitation attempts and apply patches.
+
+## Looking ahead
+Next week may see increased activity around Fortinet vulnerabilities, further analysis of Microsoft's Patch Tuesday updates, potential supply chain attacks post-PowerSchool breach, and ongoing Ivanti exploits. Stay vigilant and prepare for coordinated response efforts.

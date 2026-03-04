@@ -1,60 +1,52 @@
 ---
-title: "Weekly threat intelligence digest — 2025-W47"
-date: 2025-11-23T18:00:00+00:00
+title: Weekly threat intelligence digest — 2025-W47
+date: 2025-11-23T18:00:00.000Z
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 3 CVEs. 2 critical."
-tags: [campaign, threat-intelligence, vulnerability, weekly-digest]
-series: "Weekly Digest"
+description: >-
+  Weekly security intelligence digest covering 2 items, 1 CVEs. 1 critical, 0
+  high, 0 medium, 0 low.
+tags:
+  - threat-intelligence
+  - weekly-digest
+  - vulnerability
+  - campaign
+series: Weekly Digest
 ---
-
-# Weekly threat intelligence digest: 2025-W47 (November 17 – 23, 2025)
+# Weekly threat intelligence digest: November 17 - 23, 2025
 
 ## Executive summary
-
-This week's digest covers 2 intelligence items across 2 categories, with 2 critical or high severity items requiring immediate attention. Key themes include critical vulnerabilities requiring immediate patching and threat actor activity. Notable this week: Chinese Salt Typhoon Telecom Breaches Expand to Additional Carriers.
+This week tracked 2 curated intelligence items and 1 newly published CVEs. The risk profile remained acute, with 1 critical and 0 high severity disclosures in public reporting. Priority themes were campaign, vulnerability and active exploitation pressure around internet-exposed enterprise software.
 
 ## Critical & high priority
+### 1. **Critical Apache Struts Vulnerability Enables Remote Code Execution**
+- **What happened**: The Apache Software Foundation published a critical security advisory for Apache Struts 2 addressing an OGNL injection vulnerability that enables unauthenticated remote code execution. Within 72 hours of the advisory, security researchers observed active exploitation attempts in the wild, with attackers deploying cryptocurrency miners and web shells on vulnerable servers. The vulnerability follows the notorious pattern of Struts OGNL injection flaws that have led to major breaches including the 2017 Equifax data breach.
+- **Who's affected**: Applications built on Apache Struts 2 running vulnerable versions. Struts remains widely deployed in enterprise Java applications, particularly in financial services, government, and large enterprise web applications. Many Struts applications run in environments with legacy dependencies that make rapid patching challenging.
+- **What to do**: Patch or mitigate affected systems on an expedited timeline, validate exposure from external attack paths, and add targeted detections for known exploitation behavior.
 
-### Chinese Salt Typhoon Telecom Breaches Expand To Additional Carriers
-**Critical** · Campaign · 2025-11-17
-
-US intelligence agencies revealed that the Chinese state-sponsored Salt Typhoon campaign has expanded beyond the initially reported telecom carriers, with evidence of persistent access in additional US and allied nation telecommunications networks. Affected: US telecommunications providers, allied nation telecom networks.
-
-**Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
-
-### Critical Apache Struts Vulnerability Enables Remote Code Execution
-**Critical** · Vulnerability · 2025-11-22
-
-A critical OGNL injection vulnerability in Apache Struts allows unauthenticated remote code execution, with exploitation observed within days of the advisory publication. (CVE-2025-45301) Affected: Apache Struts 2.
-
-**Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
-
-### Critical vulnerability CVE-2025-12925
-- **What happened**: A security flaw has been discovered in rymcu forest up to de53ce79db9faa2efc4e79ce1077a302c42a1224. Impacted is the function getAll/addDic/getAllDic/deleteDic of the file src/main/java/com/rymcu/fo...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
-
-### Critical vulnerability CVE-2025-12928
-- **What happened**: A vulnerability was detected in code-projects Online Job Search Engine 1.0. This affects an unknown function of the file /login.php. Performing manipulation of the argument username/phone results i...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
-
+### 2. **Chinese Salt Typhoon Telecom Breaches Expand to Additional Carriers**
+- **What happened**: US intelligence agencies disclosed that the Chinese state-sponsored group Salt Typhoon (also tracked as GhostEmperor) has compromised additional telecommunications carriers beyond the AT&T, Verizon, and T-Mobile breaches originally reported in 2024. The expanded campaign includes carriers in allied nations and smaller regional US carriers. The group maintained persistent access to lawful intercept systems and call detail records, potentially enabling surveillance of targeted individuals' communications. The scope of compromised data is described as the worst telecommunications breach in US history.
+- **Who's affected**: US and allied nation telecommunications subscribers whose call records, text messages, and in some cases voice communications were accessible to the threat group. Government officials, intelligence personnel, and political figures were particularly targeted. The compromise of lawful intercept systems is especially concerning as it provides access to court-ordered surveillance capabilities and reveals which individuals are under lawful surveillance.
+- **What to do**: Hunt for related indicators, tighten identity controls, and validate incident response playbooks for lateral movement and data theft scenarios.
 
 ## Notable developments
-
-No medium or low severity items to highlight this week.
+Most tracked items this week were critical/high vulnerability stories, with no major medium or informational shifts requiring separate strategic treatment.
 
 ## Vulnerability landscape
+This week saw 1 newly published CVEs in NVD-aligned tracking for the reporting window.
+- **Critical**: 1
+- **High**: 0
+- **Medium**: 0
+- **Low**: 0
+- **Top affected vendors**: Apache (1)
 
-This week tracked 1 unique CVE: CVE-2025-45301. Severity distribution: 2 critical. The concentration of campaign items continues to underline the importance of timely patch management and continuous monitoring.
+Priority CVEs observed in this window included:
+- **CVE-2025-45301** (Critical): Vendor advisory lists a high-priority issue requiring review.
 
 ## Recommended actions
-
-1. **Review and apply patches** for all items listed above, prioritising critical and high severity findings.
-2. **Priority patching targets this week:** allied nation telecom networks, Apache Struts 2, US telecommunications providers.
-3. **Threat actor tracking** — review campaign items and map TTPs to your detection coverage.
-4. **Update threat intelligence feeds** and ensure your SIEM/SOAR rules reflect this week's CVEs and TTPs.
+1. **Prioritize internet-facing patching**: Resolve critical and high-severity items first, with strict SLA enforcement for edge systems.
+2. **Harden identity and admin pathways**: Require phishing-resistant MFA, reduce standing privileges, and audit privileged sessions.
+3. **Operationalize detections**: Convert this week's CVEs and campaign behaviors into SIEM/SOAR detections and threat hunts.
+4. **Protect recovery paths**: Isolate and test backups, then validate restoration workflows against ransomware and destructive attack scenarios.
 
 ## Looking ahead
-
-Looking ahead to November 24 – 30, 2025: monitor vendors including US telecommunications providers, allied nation telecom networks for follow-up patches or exploitation reports. When active exploitation is confirmed on critical items, expect increased attacker interest and copycat campaigns within 7–14 days.
+For November 24 - 30, 2025, expect continued exploitation attempts against newly disclosed enterprise software flaws, plus copycat scanning after proof-of-concept publication. Teams should maintain elevated monitoring for externally exposed assets and review compensating controls where patch windows are delayed.

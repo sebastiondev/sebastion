@@ -1,49 +1,40 @@
 ---
-title: "Weekly threat intelligence digest — 2025-W48"
-date: 2025-11-30T18:00:00+00:00
+title: Weekly threat intelligence digest — 2025-W48
+date: 2025-11-30T18:00:00.000Z
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 2 CVEs. 1 informational."
-tags: [threat-intelligence, tool, vulnerability, weekly-digest]
-series: "Weekly Digest"
+description: >-
+  Weekly security intelligence digest covering 1 items, 0 CVEs. 0 critical, 0
+  high, 0 medium, 0 low.
+tags:
+  - threat-intelligence
+  - weekly-digest
+  - vulnerability
+series: Weekly Digest
 ---
-
-# Weekly threat intelligence digest: 2025-W48 (November 24 – 30, 2025)
+# Weekly threat intelligence digest: November 24 - 30, 2025
 
 ## Executive summary
-
-This week's digest covers 1 intelligence items, with no critical or high severity items. The week was characterised by notable security developments. Defenders should review the notable developments below and maintain standard vigilance.
+This week tracked 1 curated intelligence items and 0 newly published CVEs. The risk profile remained elevated, with 0 critical and 0 high severity disclosures in public reporting. Priority themes were tool and active exploitation pressure around internet-exposed enterprise software.
 
 ## Critical & high priority
-
-No critical or high severity items this week.
-
-### Critical vulnerability CVE-2025-13257
-- **What happened**: A security vulnerability has been detected in itsourcecode Inventory Management System 1.0. The affected element is an unknown function of the file /admin/user/index.php?view=edit. The manipulation...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
-
-### Critical vulnerability CVE-2025-13262
-- **What happened**: A vulnerability was determined in lsfusion platform up to 6.1. Affected by this vulnerability is the function UploadFileRequestHandler of the file platform/web-client/src/main/java/lsfusion/http/co...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
-
+No critical or high-severity intelligence items were published in this week. Continue normal patch and monitoring cadence, with emphasis on externally reachable systems.
 
 ## Notable developments
-
-### Google Launches Open-source Ai-powered Fuzzing Platform for Critical Software
-**Informational** · Tool · 2025-11-28
-
-Google open-sourced an AI-powered fuzzing platform that has already discovered over 300 vulnerabilities in critical open-source software, offering automated vulnerability discovery capabilities to the broader security community.
+### 1. **Google Launches Open-Source AI-Powered Fuzzing Platform for Critical Software**
+- Google open-sourced an AI-powered fuzzing platform that has already discovered over 300 vulnerabilities in critical open-source software, offering automated vulnerability discovery capabilities to the broader security community.
 
 ## Vulnerability landscape
-
-No CVE identifiers were linked to this week's items. Severity distribution: 1 informational. The lower severity profile this week suggests a relatively quiet period, though defenders should not become complacent.
+This week saw 0 newly published CVEs in NVD-aligned tracking for the reporting window.
+- **Critical**: 0
+- **High**: 0
+- **Medium**: 0
+- **Low**: 0
 
 ## Recommended actions
-
-1. **Review and apply patches** for all items listed above, prioritising critical and high severity findings.
-2. **Update threat intelligence feeds** and ensure your SIEM/SOAR rules reflect this week's CVEs and TTPs.
+1. **Prioritize internet-facing patching**: Resolve critical and high-severity items first, with strict SLA enforcement for edge systems.
+2. **Harden identity and admin pathways**: Require phishing-resistant MFA, reduce standing privileges, and audit privileged sessions.
+3. **Operationalize detections**: Convert this week's CVEs and campaign behaviors into SIEM/SOAR detections and threat hunts.
+4. **Protect recovery paths**: Isolate and test backups, then validate restoration workflows against ransomware and destructive attack scenarios.
 
 ## Looking ahead
-
-Looking ahead to December 1 – 7, 2025: expect continued monitoring of items from this week as they mature. The relatively quiet threat landscape this week may precede a higher-activity period — maintain standard review cadence.
+For December 1 - 7, 2025, expect continued exploitation attempts against newly disclosed enterprise software flaws, plus copycat scanning after proof-of-concept publication. Teams should maintain elevated monitoring for externally exposed assets and review compensating controls where patch windows are delayed.

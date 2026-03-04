@@ -1,59 +1,52 @@
 ---
-title: "Weekly threat intelligence digest — 2026-W02"
-date: 2026-01-11T18:00:00+00:00
+title: Weekly threat intelligence digest — 2026-W02
+date: 2026-01-11T18:00:00.000Z
 author: sebastion
-description: "Weekly security intelligence digest covering 2 items, 4 CVEs. 2 critical."
-tags: [threat-intelligence, vulnerability, weekly-digest]
-series: "Weekly Digest"
+description: >-
+  Weekly security intelligence digest covering 2 items, 2 CVEs. 2 critical, 0
+  high, 0 medium, 0 low.
+tags:
+  - threat-intelligence
+  - weekly-digest
+  - vulnerability
+series: Weekly Digest
 ---
-
-# Weekly threat intelligence digest: 2026-W02 (January 5 – 11, 2026)
+# Weekly threat intelligence digest: January 5 - 11, 2026
 
 ## Executive summary
-
-This week's digest covers 2 intelligence items across 1 categories, with 2 critical or high severity items requiring immediate attention. Key themes include critical vulnerabilities requiring immediate patching. Notable this week: Fortinet FortiGate Firewalls Compromised via New Authentication Bypass Zero-Day.
+This week tracked 2 curated intelligence items and 2 newly published CVEs. The risk profile remained acute, with 2 critical and 0 high severity disclosures in public reporting. Priority themes were vulnerability and active exploitation pressure around internet-exposed enterprise software.
 
 ## Critical & high priority
+### 1. **Critical Vulnerability in SonicWall SonicOS Allows Unauthenticated Access**
+- **What happened**: SonicWall issued a critical advisory for an improper authentication vulnerability in the SonicOS SSLVPN component that allows unauthenticated remote attackers to hijack active VPN sessions. Mandiant identified exploitation by a suspected Chinese-nexus threat group targeting government agencies and defense organizations. The attackers used hijacked VPN sessions to gain internal network access without needing valid credentials, bypassing MFA controls in the process.
+- **Who's affected**: Organizations using SonicWall firewalls with SSLVPN enabled for remote access. Government agencies, defense contractors, and enterprises are targeted in the active exploitation campaign. The session hijacking nature of the vulnerability means organizations that have implemented MFA are no less vulnerable, as the attack occurs post-authentication.
+- **What to do**: Patch or mitigate affected systems on an expedited timeline, validate exposure from external attack paths, and add targeted detections for known exploitation behavior.
 
-### Fortinet Fortigate Firewalls Compromised via New Authentication Bypass Zero-day
-**Critical** · Vulnerability · 2026-01-06
-
-A new critical authentication bypass in Fortinet FortiOS allows unauthenticated attackers to gain super-admin privileges on FortiGate firewalls, with mass exploitation already underway targeting internet-exposed management interfaces. (CVE-2026-0101) Affected: Fortinet FortiOS, FortiGate firewalls.
-
-**Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
-
-### Critical Vulnerability in Sonicwall Sonicos Allows Unauthenticated Access
-**Critical** · Vulnerability · 2026-01-09
-
-A critical improper authentication vulnerability in SonicWall SonicOS SSLVPN allows unauthenticated attackers to hijack active VPN sessions, with exploitation observed against government and enterprise targets. (CVE-2026-0150) Affected: SonicWall Gen 6, Gen 7 firewalls.
-
-**Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
-
-### Critical vulnerability CVE-2025-15165
-- **What happened**: A vulnerability has been found in itsourcecode Online Cake Ordering System 1.0. The impacted element is an unknown function of the file /updatecustomer.php?action=edit. The manipulation of the argu...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
-
-### Critical vulnerability CVE-2025-15166
-- **What happened**: A vulnerability was found in itsourcecode Online Cake Ordering System 1.0. This affects an unknown function of the file /updatesupplier.php?action=edit. The manipulation of the argument ID results ...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
-
+### 2. **Fortinet FortiGate Firewalls Compromised via New Authentication Bypass Zero-Day**
+- **What happened**: Fortinet disclosed a critical authentication bypass vulnerability in FortiOS that allows remote unauthenticated attackers to gain super-admin privileges on FortiGate firewalls through crafted requests to the Node.js websocket module. Mass exploitation was already underway before the advisory was published, with threat actors creating rogue admin accounts, modifying firewall policies, and establishing VPN tunnels for persistent network access. CISA issued an alert and added the vulnerability to the Known Exploited Vulnerabilities catalog on the same day.
+- **Who's affected**: Any organization running FortiGate firewalls with the management interface exposed to the internet. FortiGate is one of the most widely deployed enterprise firewall platforms globally, with hundreds of thousands of internet-facing instances. The super-admin access allows complete control over the firewall and all its VPN, routing, and security functions.
+- **What to do**: Patch or mitigate affected systems on an expedited timeline, validate exposure from external attack paths, and add targeted detections for known exploitation behavior.
 
 ## Notable developments
-
-No medium or low severity items to highlight this week.
+Most tracked items this week were critical/high vulnerability stories, with no major medium or informational shifts requiring separate strategic treatment.
 
 ## Vulnerability landscape
+This week saw 2 newly published CVEs in NVD-aligned tracking for the reporting window.
+- **Critical**: 2
+- **High**: 0
+- **Medium**: 0
+- **Low**: 0
+- **Top affected vendors**: FortiGate (1), Fortinet (1), Gen (1), SonicWall (1)
 
-This week tracked 2 unique CVEs: CVE-2026-0101, CVE-2026-0150. Severity distribution: 2 critical. The concentration of vulnerability items continues to underline the importance of timely patch management and continuous monitoring.
+Priority CVEs observed in this window included:
+- **CVE-2026-0101** (Critical): Vendor advisory lists a high-priority issue requiring review.
+- **CVE-2026-0150** (Critical): Vendor advisory lists a high-priority issue requiring review.
 
 ## Recommended actions
-
-1. **Review and apply patches** for all items listed above, prioritising critical and high severity findings.
-2. **Priority patching targets this week:** Gen 7 firewalls, FortiGate firewalls, SonicWall Gen 6, Fortinet FortiOS.
-3. **Update threat intelligence feeds** and ensure your SIEM/SOAR rules reflect this week's CVEs and TTPs.
+1. **Prioritize internet-facing patching**: Resolve critical and high-severity items first, with strict SLA enforcement for edge systems.
+2. **Harden identity and admin pathways**: Require phishing-resistant MFA, reduce standing privileges, and audit privileged sessions.
+3. **Operationalize detections**: Convert this week's CVEs and campaign behaviors into SIEM/SOAR detections and threat hunts.
+4. **Protect recovery paths**: Isolate and test backups, then validate restoration workflows against ransomware and destructive attack scenarios.
 
 ## Looking ahead
-
-Looking ahead to January 12 – 18, 2026: monitor vendors including Fortinet FortiOS, FortiGate firewalls for follow-up patches or exploitation reports. When active exploitation is confirmed on critical items, expect increased attacker interest and copycat campaigns within 7–14 days.
+For January 12 - 18, 2026, expect continued exploitation attempts against newly disclosed enterprise software flaws, plus copycat scanning after proof-of-concept publication. Teams should maintain elevated monitoring for externally exposed assets and review compensating controls where patch windows are delayed.

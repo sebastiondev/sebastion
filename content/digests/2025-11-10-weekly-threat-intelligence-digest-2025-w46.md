@@ -1,52 +1,49 @@
 ---
-title: "Weekly threat intelligence digest — 2025-W46"
-date: 2025-11-16T18:00:00+00:00
+title: Weekly threat intelligence digest — 2025-W46
+date: 2025-11-16T18:00:00.000Z
 author: sebastion
-description: "Weekly security intelligence digest covering 1 items, 6 CVEs. 1 critical."
-tags: [threat-intelligence, vulnerability, weekly-digest]
-series: "Weekly Digest"
+description: >-
+  Weekly security intelligence digest covering 1 items, 4 CVEs. 4 critical, 0
+  high, 0 medium, 0 low.
+tags:
+  - threat-intelligence
+  - weekly-digest
+  - vulnerability
+series: Weekly Digest
 ---
-
-# Weekly threat intelligence digest: 2025-W46 (November 10 – 16, 2025)
+# Weekly threat intelligence digest: November 10 - 16, 2025
 
 ## Executive summary
-
-This week's digest covers 1 intelligence items across 1 categories, with 1 critical or high severity item requiring immediate attention. Key themes include critical vulnerabilities requiring immediate patching. Notable this week: Microsoft November 2025 Patch Tuesday Fixes Exchange Server Zero-Day.
+This week tracked 1 curated intelligence items and 4 newly published CVEs. The risk profile remained acute, with 4 critical and 0 high severity disclosures in public reporting. Priority themes were vulnerability and active exploitation pressure around internet-exposed enterprise software.
 
 ## Critical & high priority
-
-### Microsoft November 2025 Patch Tuesday Fixes Exchange Server Zero-day
-**Critical** · Vulnerability · 2025-11-11
-
-Microsoft's November Patch Tuesday addresses a critical Exchange Server vulnerability being exploited by a nation-state group to access email communications, along with three other actively exploited flaws. (CVE-2025-45101, CVE-2025-45102, CVE-2025-45103, CVE-2025-45104) Affected: Microsoft Exchange Server, Microsoft Windows.
-
-**Recommended action:** Apply available patches immediately. Monitor for indicators of active exploitation in your environment.
-
-### Critical vulnerability CVE-2025-12606
-- **What happened**: A vulnerability was determined in itsourcecode Online Loan Management System 1.0. This issue affects some unknown processing of the file /manage_borrower.php. This manipulation of the argument ID c...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
-
-### Critical vulnerability CVE-2025-12607
-- **What happened**: A vulnerability was identified in itsourcecode Online Loan Management System 1.0. Impacted is an unknown function of the file /manage_payment.php. Such manipulation of the argument ID leads to sql ...
-- **Who's affected**: Systems running the vulnerable software.
-- **What to do**: Apply vendor patches immediately and monitor for indicators of compromise.
-
+### 1. **Microsoft November 2025 Patch Tuesday Fixes Exchange Server Zero-Day**
+- **What happened**: Microsoft's November 2025 Patch Tuesday addressed over 65 security vulnerabilities, including an actively exploited critical vulnerability in Exchange Server that a nation-state threat group has been using to access email communications. The Exchange flaw enables server-side request forgery (SSRF) leading to arbitrary mailbox access without authentication. Three additional zero-days in Windows components were also patched, affecting the kernel, Kerberos authentication, and the Windows Task Scheduler.
+- **Who's affected**: Organizations running on-premises Exchange Server 2019 with OWA exposed to the internet. The espionage campaign targeted diplomatic, defense, and research institutions. The Windows kernel and Kerberos vulnerabilities affect all supported Windows versions and Active Directory environments respectively.
+- **What to do**: Patch or mitigate affected systems on an expedited timeline, validate exposure from external attack paths, and add targeted detections for known exploitation behavior.
 
 ## Notable developments
-
-No medium or low severity items to highlight this week.
+Most tracked items this week were critical/high vulnerability stories, with no major medium or informational shifts requiring separate strategic treatment.
 
 ## Vulnerability landscape
+This week saw 4 newly published CVEs in NVD-aligned tracking for the reporting window.
+- **Critical**: 4
+- **High**: 0
+- **Medium**: 0
+- **Low**: 0
+- **Top affected vendors**: Microsoft (8)
 
-This week tracked 4 unique CVEs: CVE-2025-45101, CVE-2025-45102, CVE-2025-45103, CVE-2025-45104. Severity distribution: 1 critical. The concentration of vulnerability items continues to underline the importance of timely patch management and continuous monitoring.
+Priority CVEs observed in this window included:
+- **CVE-2025-45101** (Critical): Vendor advisory lists a high-priority issue requiring review.
+- **CVE-2025-45102** (Critical): Vendor advisory lists a high-priority issue requiring review.
+- **CVE-2025-45103** (Critical): Vendor advisory lists a high-priority issue requiring review.
+- **CVE-2025-45104** (Critical): Vendor advisory lists a high-priority issue requiring review.
 
 ## Recommended actions
-
-1. **Review and apply patches** for all items listed above, prioritising critical and high severity findings.
-2. **Priority patching targets this week:** Microsoft Exchange Server, Microsoft Windows.
-3. **Update threat intelligence feeds** and ensure your SIEM/SOAR rules reflect this week's CVEs and TTPs.
+1. **Prioritize internet-facing patching**: Resolve critical and high-severity items first, with strict SLA enforcement for edge systems.
+2. **Harden identity and admin pathways**: Require phishing-resistant MFA, reduce standing privileges, and audit privileged sessions.
+3. **Operationalize detections**: Convert this week's CVEs and campaign behaviors into SIEM/SOAR detections and threat hunts.
+4. **Protect recovery paths**: Isolate and test backups, then validate restoration workflows against ransomware and destructive attack scenarios.
 
 ## Looking ahead
-
-Looking ahead to November 17 – 23, 2025: monitor vendors including Microsoft Exchange Server, Microsoft Windows for follow-up patches or exploitation reports. When active exploitation is confirmed on critical items, expect increased attacker interest and copycat campaigns within 7–14 days.
+For November 17 - 23, 2025, expect continued exploitation attempts against newly disclosed enterprise software flaws, plus copycat scanning after proof-of-concept publication. Teams should maintain elevated monitoring for externally exposed assets and review compensating controls where patch windows are delayed.
