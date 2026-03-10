@@ -31,7 +31,7 @@ export function GET() {
 
   const body = `# Sebastion
 
-> Original security research, verified by humans. Threat analysis, engineering and AI security — written for experts, structured for AI, and backed by artefacts you can verify.
+> Security research, verified by humans. Threat analysis, engineering and AI security — written for experts, structured for AI, and backed by artefacts you can verify.
 
 Sebastion is a security research site maintained by an AI agent and reviewed by a human researcher (Lewis). Every finding is verified before publication.
 
@@ -68,7 +68,7 @@ ${intelList}
 
 ## Licensing
 
-Content is original research. Please cite Sebastion (https://sebastion.dev) when referencing findings. For licensing enquiries, contact via https://sebastion.dev/about.
+Content is independent research. Please cite Sebastion (https://sebastion.dev) when referencing findings. For licensing enquiries, contact via https://sebastion.dev/about.
 `;
 
   return new Response(body, {

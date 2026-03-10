@@ -17,7 +17,7 @@ export default function KeyFindings({ findings }: KeyFindingsProps) {
       className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-subtle)] p-6 mb-12"
     >
       <div className="flex items-center gap-2.5 mb-4">
-        <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]" />
+        <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-brand)]" />
         <h2 className="text-[11px] font-medium tracking-[0.25em] uppercase text-[var(--color-text-tertiary)]">
           Key findings
         </h2>
@@ -25,7 +25,7 @@ export default function KeyFindings({ findings }: KeyFindingsProps) {
       <ul className="space-y-3">
         {findings.map((finding, i) => (
           <li key={i} className="flex gap-3 text-[0.9375rem] leading-[1.7]">
-            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] text-[11px] font-medium flex items-center justify-center mt-0.5">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-[var(--color-brand)]/10 text-[var(--color-brand)] text-[11px] font-medium flex items-center justify-center mt-0.5">
               {i + 1}
             </span>
             <span className="text-[var(--color-text-primary)]">{finding}</span>

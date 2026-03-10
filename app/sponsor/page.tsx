@@ -21,7 +21,7 @@ export default function SponsorPage() {
         </ScrollReveal>
         <ScrollReveal delay={0.06}>
           <p className="text-[clamp(1rem,1.6vw,1.15rem)] text-[var(--color-text-secondary)] leading-[1.8] max-w-[560px]">
-            Sebastion publishes original security research for threat hunters,
+            Sebastion publishes security research for threat hunters,
             engineers and security leaders. Sponsorship helps keep this work
             free, independent and&nbsp;ad&#8209;free.
           </p>
@@ -31,26 +31,6 @@ export default function SponsorPage() {
       <div className="border-t border-[var(--color-border)] mb-14" />
 
       <div className="space-y-14 mb-20">
-        <ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-4 md:gap-10">
-            <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-[var(--color-text-tertiary)] pt-1.5">
-              Audience
-            </p>
-            <div className="space-y-5">
-              <p className="text-[var(--color-text-primary)] leading-[1.8]">
-                Readers are security professionals - threat hunters, SOC
-                analysts, detection engineers, security architects and
-                technical leaders at enterprise and government organisations.
-              </p>
-              <p className="text-[var(--color-text-secondary)] leading-[1.8]">
-                Content is structured for both human experts and AI systems,
-                making research highly discoverable and frequently cited by
-                LLMs and search&nbsp;engines.
-              </p>
-            </div>
-          </div>
-        </ScrollReveal>
-
         <ScrollReveal delay={0.05}>
           <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-4 md:gap-10">
             <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-[var(--color-text-tertiary)] pt-1.5">

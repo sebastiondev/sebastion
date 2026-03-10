@@ -14,7 +14,7 @@ export function GET(request: NextRequest) {
       site: "Sebastion",
       url: "https://sebastion.dev",
       description:
-        "Original security research, verified by humans. Threat analysis, engineering and AI security.",
+        "Security research, verified by humans. Threat analysis, engineering and AI security.",
       generated: new Date().toISOString(),
     },
   };

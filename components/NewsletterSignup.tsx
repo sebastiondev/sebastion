@@ -69,7 +69,7 @@ export default function NewsletterSignup({
         </h3>
         <p className="text-sm text-[#8A7E72] leading-relaxed mb-6">
           The Weekly Threat Intelligence Digest lands every Sunday.
-          Original research, verified by humans.
+          Research delivered weekly, verified by humans.
         </p>
         <button
           onClick={() => setStatus("idle")}
@@ -90,7 +90,7 @@ export default function NewsletterSignup({
         </h3>
         <p className="text-sm text-[#8A7E72] mb-4 leading-relaxed">
           Weekly security research, engineering deep-dives and AI security
-          insights — delivered every Sunday.
+          insights. Delivered every Sunday.
         </p>
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
           <input
@@ -128,7 +128,7 @@ export default function NewsletterSignup({
     >
       {status === "success" && successModal}
       <div className="flex items-center gap-2.5 mb-3">
-        <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]" />
+        <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-brand)]" />
         <h3 className="text-[11px] font-medium tracking-[0.25em] uppercase text-[var(--color-text-tertiary)]">
           Newsletter
         </h3>
@@ -146,12 +146,12 @@ export default function NewsletterSignup({
             if (status === "error") setStatus("idle");
           }}
           placeholder="you@example.com"
-          className="flex-1 min-w-0 px-3.5 py-2.5 text-sm rounded-lg border border-[var(--color-border)] bg-white text-[var(--color-text-primary)] placeholder-[var(--color-text-tertiary)] focus:outline-none focus:border-[var(--color-accent)] transition-colors"
+          className="flex-1 min-w-0 px-3.5 py-2.5 text-sm rounded-lg border border-[var(--color-border)] bg-white text-[var(--color-text-primary)] placeholder-[var(--color-text-tertiary)] focus:outline-none focus:border-[var(--color-brand)] transition-colors"
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className="shrink-0 px-5 py-2.5 text-sm font-medium rounded-lg bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-hover)] transition-colors disabled:opacity-50"
+          className="shrink-0 px-5 py-2.5 text-sm font-medium rounded-lg bg-[var(--color-brand)] text-white hover:bg-[var(--color-brand-hover)] transition-colors disabled:opacity-50"
         >
           {status === "loading" ? "..." : "Subscribe"}
         </button>

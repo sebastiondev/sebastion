@@ -81,7 +81,7 @@ export default async function IntelDetailPage({
         <ScrollReveal>
           <Link
             href="/intelligence"
-            className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors mb-8 inline-flex items-center gap-2"
+            className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-brand)] transition-colors mb-8 inline-flex items-center gap-2"
           >
             <span>←</span>
             <span>Intelligence</span>
@@ -96,7 +96,7 @@ export default async function IntelDetailPage({
             >
               {item.severity}
             </span>
-            <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-accent)]">
+            <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-brand)]">
               {categoryLabels[item.category] || item.category}
             </span>
             <span className="w-1 h-1 rounded-full bg-[var(--color-border-strong)]" />
@@ -121,8 +121,8 @@ export default async function IntelDetailPage({
         <ScrollReveal delay={0.12}>
           <div className="flex items-center gap-4 flex-wrap text-[12px] text-[var(--color-text-tertiary)]">
             <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center">
-                <span className="text-[10px] font-medium text-[var(--color-accent)]">S</span>
+              <div className="w-6 h-6 rounded-full bg-[var(--color-brand)]/10 flex items-center justify-center">
+                <span className="text-[10px] font-medium text-[var(--color-brand)]">S</span>
               </div>
               <span>Sebastion</span>
             </div>
@@ -146,7 +146,7 @@ export default async function IntelDetailPage({
                   href={`https://nvd.nist.gov/vuln/detail/${cve}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-mono px-2.5 py-1 rounded border border-[var(--color-border)] text-[var(--color-accent)] hover:border-[var(--color-accent-muted)] transition-colors"
+                  className="text-xs font-mono px-2.5 py-1 rounded border border-[var(--color-border)] text-[var(--color-brand)] hover:border-[var(--color-brand-muted)] transition-colors"
                 >
                   {cve}
                 </a>
@@ -199,7 +199,7 @@ export default async function IntelDetailPage({
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[var(--color-accent)] hover:underline break-all"
+                  className="text-sm text-[var(--color-brand)] hover:underline break-all"
                 >
                   {source.title}
                 </a>
@@ -216,7 +216,7 @@ export default async function IntelDetailPage({
             <Link
               key={tag}
               href={`/tags/${tag}`}
-              className="text-[11px] px-2.5 py-1 rounded-full border border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:border-[var(--color-accent-muted)] hover:text-[var(--color-accent)] transition-all duration-300"
+              className="text-[11px] px-2.5 py-1 rounded-full border border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:border-[var(--color-brand-muted)] hover:text-[var(--color-brand)] transition-all duration-300"
             >
               {tag}
             </Link>
@@ -228,7 +228,7 @@ export default async function IntelDetailPage({
       <div className="border-t border-[var(--color-border)] mt-12 pt-10 pb-20">
         <Link
           href="/intelligence"
-          className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors inline-flex items-center gap-2"
+          className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-brand)] transition-colors inline-flex items-center gap-2"
         >
           <span>←</span>
           <span>Back to intelligence</span>

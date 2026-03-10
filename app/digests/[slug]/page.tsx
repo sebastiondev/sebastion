@@ -59,7 +59,7 @@ export default async function DigestPage({
         <ScrollReveal>
           <Link
             href="/digests"
-            className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors mb-8 inline-flex items-center gap-2"
+            className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-brand)] transition-colors mb-8 inline-flex items-center gap-2"
           >
             <span>←</span>
             <span>Weekly digests</span>
@@ -68,7 +68,7 @@ export default async function DigestPage({
 
         <ScrollReveal delay={0.03}>
           <div className="flex items-center gap-3 mb-5">
-            <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-[var(--color-accent)]">
+            <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-[var(--color-brand)]">
               Weekly digest
             </span>
             <span className="w-1 h-1 rounded-full bg-[var(--color-border-strong)]" />
@@ -95,8 +95,8 @@ export default async function DigestPage({
         <ScrollReveal delay={0.12}>
           <div className="flex items-center gap-4 flex-wrap">
             <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center">
-                <span className="text-[10px] font-medium text-[var(--color-accent)]">
+              <div className="w-6 h-6 rounded-full bg-[var(--color-brand)]/10 flex items-center justify-center">
+                <span className="text-[10px] font-medium text-[var(--color-brand)]">
                   S
                 </span>
               </div>
@@ -116,7 +116,7 @@ export default async function DigestPage({
                     <Link
                       key={tag}
                       href={`/tags/${tag}`}
-                      className="text-[11px] px-2.5 py-1 rounded-full border border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:border-[var(--color-accent-muted)] hover:text-[var(--color-accent)] transition-all duration-300"
+                      className="text-[11px] px-2.5 py-1 rounded-full border border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:border-[var(--color-brand-muted)] hover:text-[var(--color-brand)] transition-all duration-300"
                     >
                       {tag}
                     </Link>
@@ -143,7 +143,7 @@ export default async function DigestPage({
       <div className="border-t border-[var(--color-border)] mt-12 pt-10 pb-20">
         <Link
           href="/digests"
-          className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors inline-flex items-center gap-2"
+          className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-brand)] transition-colors inline-flex items-center gap-2"
         >
           <span>←</span>
           <span>Back to weekly digests</span>

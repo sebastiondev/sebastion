@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Sebastion - original security research maintained by an AI agent, verified by humans.",
+  description: "Sebastion - security research maintained by an AI agent, verified by humans.",
 };
 
 export default function AboutPage() {
@@ -37,7 +37,7 @@ export default function AboutPage() {
           <p className="text-[clamp(1rem,1.6vw,1.15rem)] text-[var(--color-text-secondary)] leading-[1.8] max-w-[560px]">
             Sebastion is an experiment in what security research looks like
             when AI writes the first draft and a human validates every finding.
-            Original research, structured for machines and
+            Research structured for machines and
             experts&nbsp;alike.
           </p>
         </ScrollReveal>
@@ -124,7 +124,7 @@ export default function AboutPage() {
               {interests.map((tag) => (
                 <span
                   key={tag}
-                  className="text-[13px] px-4 py-2 rounded-full border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-accent-muted)] hover:text-[var(--color-accent)] transition-all duration-300 cursor-default"
+                  className="text-[13px] px-4 py-2 rounded-full border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-brand-muted)] hover:text-[var(--color-brand)] transition-all duration-300 cursor-default"
                 >
                   {tag}
                 </span>

@@ -43,7 +43,7 @@ export default async function TagPage({
         <ScrollReveal>
           <Link
             href="/tags"
-            className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors mb-6 inline-flex items-center gap-2"
+            className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-brand)] transition-colors mb-6 inline-flex items-center gap-2"
           >
             <span>←</span>
             <span>All topics</span>
@@ -86,12 +86,12 @@ export default async function TagPage({
                     )}
                     <div>
                       <div className="flex items-center gap-3 mb-3">
-                        <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-accent)]">
+                        <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-brand)]">
                           {post.tags?.[0] || "Essay"}
                         </span>
                         <span className="text-[10px] text-[var(--color-text-tertiary)]">{post.readingTime}</span>
                       </div>
-                      <h2 className="font-['Source_Serif_4',Georgia,serif] text-[clamp(1.3rem,3vw,1.8rem)] font-bold leading-[1.15] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300 mb-3">
+                      <h2 className="font-['Source_Serif_4',Georgia,serif] text-[clamp(1.3rem,3vw,1.8rem)] font-bold leading-[1.15] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-brand)] transition-colors duration-300 mb-3">
                         {post.title}
                       </h2>
                       {post.description && (
@@ -123,12 +123,12 @@ export default async function TagPage({
                     )}
                     <div className="flex-1 min-w-0 py-1">
                       <div className="flex items-center gap-2.5 mb-2">
-                        <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-accent)]">
+                        <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-brand)]">
                           {post.tags?.[0] || "Essay"}
                         </span>
                         <span className="text-[10px] text-[var(--color-text-tertiary)]">{post.readingTime}</span>
                       </div>
-                      <h2 className="font-['Source_Serif_4',Georgia,serif] text-[1.1rem] font-semibold leading-[1.25] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300 mb-1.5">
+                      <h2 className="font-['Source_Serif_4',Georgia,serif] text-[1.1rem] font-semibold leading-[1.25] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-brand)] transition-colors duration-300 mb-1.5">
                         {post.title}
                       </h2>
                       <time className="text-[11px] text-[var(--color-text-tertiary)]">
@@ -155,17 +155,17 @@ export default async function TagPage({
               <ScrollReveal key={digest.slug} delay={i * 0.04}>
                 <Link
                   href={`/digests/${digest.slug}`}
-                  className="group flex items-center justify-between gap-4 py-3 border-b border-[var(--color-border)] hover:border-[var(--color-accent-muted)] transition-colors duration-300"
+                  className="group flex items-center justify-between gap-4 py-3 border-b border-[var(--color-border)] hover:border-[var(--color-brand-muted)] transition-colors duration-300"
                 >
                   <div>
-                    <h3 className="font-['Source_Serif_4',Georgia,serif] text-[1rem] font-semibold leading-[1.25] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300 mb-0.5">
+                    <h3 className="font-['Source_Serif_4',Georgia,serif] text-[1rem] font-semibold leading-[1.25] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-brand)] transition-colors duration-300 mb-0.5">
                       {digest.title}
                     </h3>
                     <time className="text-[11px] text-[var(--color-text-tertiary)]">
                       {formatDate(digest.date)}
                     </time>
                   </div>
-                  <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-accent)] flex-shrink-0">
+                  <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-brand)] flex-shrink-0">
                     Digest
                   </span>
                 </Link>

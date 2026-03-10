@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Research",
-  description: "Original security research, threat analysis and engineering.",
+  description: "Security research, threat analysis and engineering.",
 };
 
 const placeholderColors = [
@@ -34,7 +34,7 @@ export default function PostsPage() {
             Research
           </h1>
           <p className="text-[var(--color-text-secondary)] text-lg max-w-[480px]">
-            {posts.length} {posts.length === 1 ? 'piece' : 'pieces'} of original security research, engineering
+            {posts.length} {posts.length === 1 ? 'piece' : 'pieces'} of security research, engineering
             and field notes.
           </p>
         </ScrollReveal>
@@ -70,13 +70,13 @@ export default function PostsPage() {
               )}
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-accent)]">
+                  <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-brand)]">
                     {featured.tags?.[0] || "Essay"}
                   </span>
                   <span className="w-1 h-1 rounded-full bg-[var(--color-border-strong)]" />
                   <span className="text-xs text-[var(--color-text-tertiary)]">{featured.readingTime}</span>
                 </div>
-                <h2 className="font-['Source_Serif_4',Georgia,serif] text-[clamp(1.5rem,3vw,2.2rem)] font-bold leading-[1.12] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300 mb-4">
+                <h2 className="font-['Source_Serif_4',Georgia,serif] text-[clamp(1.5rem,3vw,2.2rem)] font-bold leading-[1.12] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-brand)] transition-colors duration-300 mb-4">
                   {featured.title}
                 </h2>
                 {featured.description && (
@@ -130,12 +130,12 @@ export default function PostsPage() {
                       </div>
                     )}
                     <div className="flex items-center gap-3 mb-2.5">
-                      <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-accent)]">
+                      <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-brand)]">
                         {post.tags?.[0] || "Essay"}
                       </span>
                       <span className="text-[10px] text-[var(--color-text-tertiary)]">{post.readingTime}</span>
                     </div>
-                    <h3 className="font-['Source_Serif_4',Georgia,serif] text-[clamp(1.05rem,1.8vw,1.35rem)] font-semibold leading-[1.2] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300 mb-2">
+                    <h3 className="font-['Source_Serif_4',Georgia,serif] text-[clamp(1.05rem,1.8vw,1.35rem)] font-semibold leading-[1.2] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-brand)] transition-colors duration-300 mb-2">
                       {post.title}
                     </h3>
                     {post.description && (

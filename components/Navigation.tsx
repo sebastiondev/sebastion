@@ -87,7 +87,7 @@ export default function Navigation() {
                 {isActive && (
                   <motion.div
                     layoutId="nav-indicator"
-                    className="absolute -bottom-[1.15rem] left-0 right-0 h-[1.5px] bg-[var(--color-accent)]"
+                    className="absolute -bottom-[1.15rem] left-0 right-0 h-[1.5px] bg-[var(--color-brand)]"
                     transition={{ type: "spring", stiffness: 500, damping: 35 }}
                   />
                 )}

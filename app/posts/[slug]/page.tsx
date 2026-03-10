@@ -78,7 +78,7 @@ export default async function PostPage({
           <ScrollReveal>
             <Link
               href="/posts"
-              className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors mb-8 inline-flex items-center gap-2"
+              className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-brand)] transition-colors mb-8 inline-flex items-center gap-2"
             >
               <span>←</span>
               <span>Research</span>
@@ -88,7 +88,7 @@ export default async function PostPage({
           <ScrollReveal delay={0.03}>
             <div className="flex items-center gap-3 mb-5">
               {post.contentType && (
-                <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-[var(--color-accent)]">
+                <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-[var(--color-brand)]">
                   {contentTypeLabels[post.contentType] || post.contentType}
                 </span>
               )}
@@ -125,8 +125,8 @@ export default async function PostPage({
             <div className="flex items-center gap-4 flex-wrap">
               {/* Author byline */}
               <div className="flex items-center gap-2">
-                <div className="w-6 h-6 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center">
-                  <span className="text-[10px] font-medium text-[var(--color-accent)]">
+                <div className="w-6 h-6 rounded-full bg-[var(--color-brand)]/10 flex items-center justify-center">
+                  <span className="text-[10px] font-medium text-[var(--color-brand)]">
                     {(post.author || "L")[0].toUpperCase()}
                   </span>
                 </div>
@@ -141,7 +141,7 @@ export default async function PostPage({
               {post.tier && post.tier !== "free" && (
                 <>
                   <span className="w-px h-3 bg-[var(--color-border)]" />
-                  <span className="text-[10px] font-medium tracking-[0.15em] uppercase px-2 py-0.5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
+                  <span className="text-[10px] font-medium tracking-[0.15em] uppercase px-2 py-0.5 rounded-full bg-[var(--color-brand)]/10 text-[var(--color-brand)]">
                     {post.tier === "member" ? "Member" : "Preview"}
                   </span>
                 </>
@@ -154,7 +154,7 @@ export default async function PostPage({
                       <Link
                         key={tag}
                         href={`/tags/${tag}`}
-                        className="text-[11px] px-2.5 py-1 rounded-full border border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:border-[var(--color-accent-muted)] hover:text-[var(--color-accent)] transition-all duration-300"
+                        className="text-[11px] px-2.5 py-1 rounded-full border border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:border-[var(--color-brand-muted)] hover:text-[var(--color-brand)] transition-all duration-300"
                       >
                         {tag}
                       </Link>
@@ -213,7 +213,7 @@ export default async function PostPage({
         <div className="border-t border-[var(--color-border)] mt-12 pt-10 pb-20">
           <Link
             href="/posts"
-            className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors inline-flex items-center gap-2"
+            className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-brand)] transition-colors inline-flex items-center gap-2"
           >
             <span>←</span>
             <span>Back to research</span>

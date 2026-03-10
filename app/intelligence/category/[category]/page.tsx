@@ -83,7 +83,7 @@ export default async function IntelCategoryPage({
         <ScrollReveal>
           <Link
             href="/intelligence"
-            className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors mb-8 inline-flex items-center gap-2"
+            className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-brand)] transition-colors mb-8 inline-flex items-center gap-2"
           >
             <span>&larr;</span>
             <span>All Intelligence</span>
@@ -115,8 +115,8 @@ export default async function IntelCategoryPage({
               href={`/intelligence/category/${cat}`}
               className={`text-[11px] px-3 py-1.5 rounded-full border transition-all duration-300 ${
                 cat === category
-                  ? "border-[var(--color-accent)] text-[var(--color-accent)] bg-[var(--color-accent)]/5"
-                  : "border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:border-[var(--color-accent-muted)] hover:text-[var(--color-accent)]"
+                  ? "border-[var(--color-brand)] text-[var(--color-brand)] bg-[var(--color-brand)]/5"
+                  : "border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:border-[var(--color-brand-muted)] hover:text-[var(--color-brand)]"
               }`}
             >
               {categoryMeta[cat]?.label || cat}
