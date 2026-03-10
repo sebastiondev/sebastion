@@ -293,7 +293,7 @@ export default function SebastionHeroChat({ seed }: { seed: HeroSeed }) {
           {/* Response area */}
           <div
             ref={responseRef}
-            className="pb-4 space-y-2.5 max-h-[280px] overflow-y-auto scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+            className="pb-4 space-y-2.5 max-h-[280px] overflow-y-auto scrollbar-none"
           >
             {promptDone && (
               <>

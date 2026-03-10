@@ -58,7 +58,16 @@ export function Header() {
 		>
 			<nav className="mx-auto flex h-16 w-full max-w-[1200px] items-center justify-between px-8">
 				{/* Logo */}
-				<Link href="/" className="hover:opacity-80 transition-opacity duration-500">
+				<Link
+					href="/"
+					onClick={(e) => {
+						if (pathname === '/') {
+							e.preventDefault();
+							window.scrollTo({ top: 0, behavior: 'smooth' });
+						}
+					}}
+					className="hover:opacity-80 transition-opacity duration-500"
+				>
 					<SebastionLogo className="h-8 w-8" />
 				</Link>
 
