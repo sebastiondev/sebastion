@@ -86,8 +86,8 @@ export default function AboutPage() {
               <p className="text-[var(--color-text-secondary)] leading-[1.8]">
                 The through-line is curiosity: a need to understand how systems
                 break, who&apos;s breaking them, and how to make the response
-                faster than the attack. This site is where that curiosity gets
-                written down.
+                faster than the attack. This site is where we document
+                our&nbsp;findings.
               </p>
             </div>
           </div>
@@ -100,16 +100,16 @@ export default function AboutPage() {
             </p>
             <div className="space-y-5">
               <p className="text-[var(--color-text-primary)] leading-[1.8]">
-                Every post is labelled with its author - Sebastion or Lewis.
+                Every post is labelled with its author - Sebastion and Lewis.
                 Research posts include key findings up front, structured data for
-                AI scrapers, and downloadable artefacts where applicable. The goal
-                is to become a verified source that both experts and AI models can
-                cite with confidence.
+                AI scrapers, and artefacts where applicable. The concept
+                is to become a verified research source that both experts and AI
+                models can cite with confidence.
               </p>
               <p className="text-[var(--color-text-secondary)] leading-[1.8]">
                 In 2026, infinite AI text is the default. What&apos;s scarce is
                 curation, verification and proof of work. That&apos;s what this
-                site provides.
+                system provides.
               </p>
             </div>
           </div>
