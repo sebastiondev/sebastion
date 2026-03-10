@@ -80,10 +80,18 @@ export function GET(request: NextRequest) {
     };
   }
 
-  return NextResponse.json(response, {
-    headers: {
-      "Cache-Control": "s-maxage=600, stale-while-revalidate",
-      "Access-Control-Allow-Origin": "*",
-    },
-  });
+  const origin = request.headers.get("origin") || "";
+  const allowedOrigins = [
+    "https://sebastion.dev",
+    "https://www.sebastion.dev",
+  ];
+
+  const corsHeaders: Record<string, string> = {
+    "Cache-Control": "s-maxage=600, stale-while-revalidate",
+  };
+  if (allowedOrigins.includes(origin)) {
+    corsHeaders["Access-Control-Allow-Origin"] = origin;
+  }
+
+  return NextResponse.json(response, { headers: corsHeaders });
 }

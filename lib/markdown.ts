@@ -55,7 +55,13 @@ export async function renderMarkdown(content: string): Promise<string> {
   // Render each Collapse block's inner content and inject back
   for (let i = 0; i < collapseBlocks.length; i++) {
     const innerHtml = await processMarkdownContent(collapseBlocks[i].inner);
-    const detailsHtml = `<details class="collapse-block"><summary>${collapseBlocks[i].summary}</summary><div class="collapse-content">${innerHtml}</div></details>`;
+    // Escape summary text to prevent HTML injection
+    const safeSummary = collapseBlocks[i].summary
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+    const detailsHtml = `<details class="collapse-block"><summary>${safeSummary}</summary><div class="collapse-content">${innerHtml}</div></details>`;
     html = html.replace(`<!--COLLAPSE_PLACEHOLDER_${i}-->`, detailsHtml);
   }
 
