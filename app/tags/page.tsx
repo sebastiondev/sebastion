@@ -35,7 +35,7 @@ export default function TagsPage() {
             <ScrollReveal key={tag} delay={i * 0.025}>
               <Link
                 href={`/tags/${tag}`}
-                className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-accent-muted)] hover:text-[var(--color-accent)] transition-all duration-300 text-[13px]"
+                className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-brand-muted)] hover:text-[var(--color-brand)] transition-all duration-300 text-[13px]"
               >
                 <span>{tag}</span>
                 <span className="text-[11px] text-[var(--color-text-tertiary)]">

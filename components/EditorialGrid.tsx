@@ -62,20 +62,20 @@ function EditorialCard({
             </div>
           ) : (
             <div className="mb-6">
-              <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-[var(--color-accent)]">
+              <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-[var(--color-brand)]">
                 Featured
               </span>
             </div>
           )}
           <div className="max-w-[640px]">
             <div className="flex items-center gap-3 mb-3">
-              <span className="text-xs font-medium text-[var(--color-accent)] uppercase tracking-[0.15em]">
+              <span className="text-xs font-medium text-[var(--color-brand)] uppercase tracking-[0.15em]">
                 {tag}
               </span>
               <span className="w-1 h-1 rounded-full bg-[var(--color-border-strong)]" />
               <span className="text-xs text-[var(--color-text-tertiary)]">{post.readingTime}</span>
             </div>
-            <h3 className="font-['Source_Serif_4',Georgia,serif] text-[clamp(1.6rem,3.5vw,2.5rem)] font-bold leading-[1.1] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300 mb-3">
+            <h3 className="font-['Source_Serif_4',Georgia,serif] text-[clamp(1.6rem,3.5vw,2.5rem)] font-bold leading-[1.1] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-brand)] transition-colors duration-300 mb-3">
               {post.title}
             </h3>
             {post.description && (
@@ -117,12 +117,12 @@ function EditorialCard({
             </div>
           )}
           <div className="flex items-center gap-3 mb-2">
-            <span className="text-[10px] font-medium text-[var(--color-accent)] uppercase tracking-[0.15em]">
+            <span className="text-[10px] font-medium text-[var(--color-brand)] uppercase tracking-[0.15em]">
               {tag}
             </span>
             <span className="text-[10px] text-[var(--color-text-tertiary)]">{post.readingTime}</span>
           </div>
-          <h3 className="font-['Source_Serif_4',Georgia,serif] text-[clamp(1.1rem,2vw,1.4rem)] font-semibold leading-[1.2] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300 mb-2">
+          <h3 className="font-['Source_Serif_4',Georgia,serif] text-[clamp(1.1rem,2vw,1.4rem)] font-semibold leading-[1.2] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-brand)] transition-colors duration-300 mb-2">
             {post.title}
           </h3>
           <time className="text-xs text-[var(--color-text-tertiary)]">
@@ -159,12 +159,12 @@ function EditorialCard({
         )}
         <div className="flex-1 min-w-0 py-1">
           <div className="flex items-center gap-2 mb-1.5">
-            <span className="text-[10px] font-medium text-[var(--color-accent)] uppercase tracking-[0.15em]">
+            <span className="text-[10px] font-medium text-[var(--color-brand)] uppercase tracking-[0.15em]">
               {tag}
             </span>
             <span className="text-[10px] text-[var(--color-text-tertiary)]">{post.readingTime}</span>
           </div>
-          <h3 className="font-['Source_Serif_4',Georgia,serif] text-[1rem] font-semibold leading-[1.25] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300 mb-1 line-clamp-2">
+          <h3 className="font-['Source_Serif_4',Georgia,serif] text-[1rem] font-semibold leading-[1.25] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-brand)] transition-colors duration-300 mb-1 line-clamp-2">
             {post.title}
           </h3>
           <time className="text-[11px] text-[var(--color-text-tertiary)]">
@@ -218,7 +218,7 @@ export default function EditorialGrid({ posts }: EditorialGridProps) {
           </div>
           <Link
             href="/posts"
-            className="text-sm text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors pb-1"
+            className="text-sm text-[var(--color-text-tertiary)] hover:text-[var(--color-brand)] transition-colors pb-1"
           >
             View all →
           </Link>

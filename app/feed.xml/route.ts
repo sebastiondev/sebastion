@@ -63,7 +63,7 @@ export function GET() {
   <channel>
     <title>Sebastion</title>
     <link>https://sebastion.dev</link>
-    <description>Original security research and threat intelligence, verified by humans. Threat analysis, engineering and AI security.</description>
+    <description>Security research and threat intelligence, verified by humans. Threat analysis, engineering and AI security.</description>
     <language>en-gb</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="https://sebastion.dev/feed.xml" rel="self" type="application/rss+xml" />

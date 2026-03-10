@@ -42,7 +42,7 @@ export default function IntelligencePage() {
           <div className="flex items-center gap-4 flex-wrap">
             <Link
               href="/intelligence/feed.xml"
-              className="inline-flex items-center gap-2 text-[13px] text-[var(--color-accent)] hover:underline"
+              className="inline-flex items-center gap-2 text-[13px] text-[var(--color-brand)] hover:underline"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <circle cx="6.18" cy="17.82" r="2.18" />
@@ -53,7 +53,7 @@ export default function IntelligencePage() {
             <span className="w-px h-4 bg-[var(--color-border)]" />
             <Link
               href="/intelligence/cves"
-              className="text-[13px] text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors"
+              className="text-[13px] text-[var(--color-text-tertiary)] hover:text-[var(--color-brand)] transition-colors"
             >
               CVE Index
             </Link>
@@ -74,7 +74,7 @@ export default function IntelligencePage() {
               <Link
                 key={cat.id}
                 href={`/intelligence/category/${cat.id}`}
-                className="text-[11px] px-3 py-1.5 rounded-full border border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:border-[var(--color-accent-muted)] hover:text-[var(--color-accent)] transition-all duration-300"
+                className="text-[11px] px-3 py-1.5 rounded-full border border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:border-[var(--color-brand-muted)] hover:text-[var(--color-brand)] transition-all duration-300"
               >
                 {cat.label}
               </Link>
@@ -149,7 +149,7 @@ export default function IntelligencePage() {
             <div className="flex flex-col gap-3">
               <Link
                 href="/intelligence/feed.xml"
-                className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#2C2520] text-[13px] font-medium text-[#FAF7F2] hover:bg-[var(--color-accent)] transition-colors w-fit"
+                className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#2C2520] text-[13px] font-medium text-[#FAF7F2] hover:bg-[var(--color-brand)] transition-colors w-fit"
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                   <circle cx="6.18" cy="17.82" r="2.18" />

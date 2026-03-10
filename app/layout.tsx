@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Navigation from "@/components/Navigation";
+import { Header } from "@/components/ui/header-3";
 import Footer from "@/components/Footer";
 import ReadingProgress from "@/components/ReadingProgress";
 import "./globals.css";
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s - Sebastion",
   },
   description:
-    "Original security research, verified by humans. Threat analysis, engineering and AI security - written for experts and machines.",
+    "Security research, verified by humans. Threat analysis, engineering and AI security - written for experts and machines.",
   metadataBase: new URL("https://sebastion.dev"),
   icons: {
     icon: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sebastion",
     description:
-      "Original security research, verified by humans. Threat analysis, engineering and AI security.",
+      "Security research, verified by humans. Threat analysis, engineering and AI security.",
     type: "website",
     siteName: "Sebastion",
   },
@@ -81,7 +81,7 @@ export default function RootLayout({
               name: "Sebastion",
               url: "https://sebastion.dev",
               description:
-                "Original security research, verified by humans. Threat analysis, engineering and AI security.",
+                "Security research, verified by humans. Threat analysis, engineering and AI security.",
               publisher: {
                 "@type": "Organization",
                 name: "Sebastion",
@@ -102,7 +102,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col">
         <ReadingProgress />
-        <Navigation />
+        <Header />
         <main className="flex-1">{children}</main>
         <Footer />
         <Analytics />

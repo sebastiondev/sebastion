@@ -47,7 +47,7 @@ export default function IntelCard({
     >
       <Link
         href={`/intelligence/${item.slug}`}
-        className="group block rounded-xl border border-[var(--color-border)] p-5 hover:border-[var(--color-accent-muted)] transition-all duration-300"
+        className="group block rounded-xl border border-[var(--color-border)] p-5 hover:border-[var(--color-brand-muted)] transition-all duration-300"
       >
         {/* Top row: severity + category + status */}
         <div className="flex items-center gap-2 mb-3 flex-wrap">
@@ -56,7 +56,7 @@ export default function IntelCard({
           >
             {item.severity}
           </span>
-          <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-accent)]">
+          <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-brand)]">
             {categoryLabels[item.category] || item.category}
           </span>
           <span className="w-1 h-1 rounded-full bg-[var(--color-border-strong)]" />
@@ -66,7 +66,7 @@ export default function IntelCard({
         </div>
 
         {/* Title */}
-        <h3 className="font-['Source_Serif_4',Georgia,serif] text-[1.1rem] font-semibold leading-[1.25] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300 mb-2">
+        <h3 className="font-['Source_Serif_4',Georgia,serif] text-[1.1rem] font-semibold leading-[1.25] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-brand)] transition-colors duration-300 mb-2">
           {item.title}
         </h3>
 

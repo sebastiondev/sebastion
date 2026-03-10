@@ -17,7 +17,7 @@ export default function Footer() {
             Get the research first
           </h2>
           <p className="text-[var(--color-text-secondary)] text-base max-w-[440px] mx-auto mb-8 leading-relaxed">
-            Original security research, engineering and artefacts -
+            Security research, engineering and artefacts -
             delivered weekly. Verified by humans, structured for experts.
           </p>
           <NewsletterSignup context="page" />
@@ -34,7 +34,7 @@ export default function Footer() {
                 Sebastion
               </p>
               <p className="text-[13px] text-[#8A7E72] leading-[1.7] max-w-[300px] mb-6">
-                Original security research, maintained by AI, verified by
+                Security research, maintained by AI, verified by
                 humans. Threat analysis, engineering and AI&nbsp;security.
               </p>
               <NewsletterSignup context="footer" />

@@ -184,7 +184,7 @@ export default function FloatingFragments({ posts }: Props) {
                 {item.tags.map((t) => (
                   <span
                     key={t}
-                    className="text-[9px] md:text-[10px] px-2 md:px-2.5 py-0.5 rounded-full border border-[var(--color-accent-muted)] text-[var(--color-accent)] bg-white/70 whitespace-nowrap"
+                    className="text-[9px] md:text-[10px] px-2 md:px-2.5 py-0.5 rounded-full border border-[var(--color-brand-muted)] text-[var(--color-brand)] bg-white/70 whitespace-nowrap"
                   >
                     {t}
                   </span>
@@ -221,7 +221,7 @@ export default function FloatingFragments({ posts }: Props) {
             } as React.CSSProperties}
           >
             <div className="max-w-[160px] md:max-w-[220px]">
-              <span className="block text-[8px] md:text-[9px] font-medium tracking-[0.2em] uppercase text-[var(--color-accent)] mb-1">
+              <span className="block text-[8px] md:text-[9px] font-medium tracking-[0.2em] uppercase text-[var(--color-brand)] mb-1">
                 {item.sub}
               </span>
               <span className="block text-[11px] md:text-[14px] font-semibold text-[var(--color-text-primary)] leading-tight font-['Source_Serif_4',Georgia,serif]">

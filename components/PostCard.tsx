@@ -24,7 +24,7 @@ export default function PostCard({ post, index }: PostCardProps) {
             <span>{post.readingTime}</span>
           </div>
 
-          <h3 className="font-['Source_Serif_4',Georgia,serif] text-xl font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-200 leading-snug">
+          <h3 className="font-['Source_Serif_4',Georgia,serif] text-xl font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-brand)] transition-colors duration-200 leading-snug">
             {post.title}
           </h3>
 

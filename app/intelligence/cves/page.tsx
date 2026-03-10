@@ -27,7 +27,7 @@ export default function CvesPage() {
         <ScrollReveal>
           <Link
             href="/intelligence"
-            className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors mb-8 inline-flex items-center gap-2"
+            className="text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--color-text-tertiary)] hover:text-[var(--color-brand)] transition-colors mb-8 inline-flex items-center gap-2"
           >
             <span>&larr;</span>
             <span>Intelligence</span>
@@ -58,13 +58,13 @@ export default function CvesPage() {
           <div className="space-y-3">
             {cves.map(({ cve, items }, i) => (
               <ScrollReveal key={cve} delay={i * 0.02}>
-                <div className="rounded-xl border border-[var(--color-border)] p-4 hover:border-[var(--color-accent-muted)] transition-all duration-300">
+                <div className="rounded-xl border border-[var(--color-border)] p-4 hover:border-[var(--color-brand-muted)] transition-all duration-300">
                   <div className="flex items-start justify-between gap-4 mb-2">
                     <a
                       href={`https://nvd.nist.gov/vuln/detail/${cve}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-mono text-sm font-medium text-[var(--color-accent)] hover:underline"
+                      className="font-mono text-sm font-medium text-[var(--color-brand)] hover:underline"
                     >
                       {cve}
                     </a>
@@ -82,7 +82,7 @@ export default function CvesPage() {
                         <span className={`text-[10px] font-semibold uppercase ${severityColors[item.severity] || "text-gray-500"}`}>
                           {item.severity}
                         </span>
-                        <span className="text-[var(--color-text-secondary)] group-hover:text-[var(--color-accent)] transition-colors truncate">
+                        <span className="text-[var(--color-text-secondary)] group-hover:text-[var(--color-brand)] transition-colors truncate">
                           {item.title}
                         </span>
                         <span className="text-[10px] text-[var(--color-text-tertiary)] shrink-0">

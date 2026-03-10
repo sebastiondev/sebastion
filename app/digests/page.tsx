@@ -42,10 +42,10 @@ export default function DigestsPage() {
           <ScrollReveal key={digest.slug} delay={i * 0.04}>
             <Link
               href={`/digests/${digest.slug}`}
-              className="group block rounded-xl border border-[var(--color-border)] p-6 hover:border-[var(--color-accent-muted)] transition-all duration-300"
+              className="group block rounded-xl border border-[var(--color-border)] p-6 hover:border-[var(--color-brand-muted)] transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-2.5">
-                <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-accent)]">
+                <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[var(--color-brand)]">
                   Weekly digest
                 </span>
                 <span className="w-1 h-1 rounded-full bg-[var(--color-border-strong)]" />
@@ -53,7 +53,7 @@ export default function DigestsPage() {
                   {digest.readingTime}
                 </span>
               </div>
-              <h2 className="font-['Source_Serif_4',Georgia,serif] text-[clamp(1.1rem,2vw,1.4rem)] font-semibold leading-[1.2] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300 mb-2">
+              <h2 className="font-['Source_Serif_4',Georgia,serif] text-[clamp(1.1rem,2vw,1.4rem)] font-semibold leading-[1.2] tracking-tight text-[var(--color-text-primary)] group-hover:text-[var(--color-brand)] transition-colors duration-300 mb-2">
                 {digest.title}
               </h2>
               {digest.description && (

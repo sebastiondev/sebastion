@@ -71,7 +71,7 @@ export const CONTENT_PILLARS: ContentPillar[] = [
     label: "Threat Research",
     description: "Malware analysis, campaign tracking, vulnerability write-ups",
     longDescription:
-      "Original investigations into active threats — reverse engineering malware, tracking campaigns and documenting vulnerabilities before they become common knowledge. Every finding is backed by artefacts.",
+      "Investigations into active threats — reverse engineering malware, tracking campaigns and documenting vulnerabilities before they become common knowledge. Every finding is backed by artefacts.",
     tags: ["malware", "vulnerability", "security", "openclaw"],
   },
   {
