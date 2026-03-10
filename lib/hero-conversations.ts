@@ -69,6 +69,13 @@ function randInt(min: number, max: number): number {
   return Math.floor(_rng() * (max - min + 1)) + min;
 }
 
+function truncate(str: string, max: number): string {
+  if (str.length <= max) return str;
+  const trimmed = str.slice(0, max);
+  const lastSpace = trimmed.lastIndexOf(" ");
+  return (lastSpace > max * 0.6 ? trimmed.slice(0, lastSpace) : trimmed) + "…";
+}
+
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -107,7 +114,7 @@ function makeSupplyChainConvo(seed: HeroSeed): Conversation {
   return {
     id: `supply-chain-${++_idCounter}`,
     prompt: supplyIntel
-      ? `Investigate this: ${supplyIntel.title.slice(0, 60)}`
+      ? `Investigate this: ${truncate(supplyIntel.title, 60)}`
       : `Analyse this ${pkg} package for supply-chain risk`,
     topic: "supply-chain",
     topicLabel: "Supply chain",
@@ -200,7 +207,7 @@ function makeAISecurityConvo(seed: HeroSeed): Conversation {
   return {
     id: `ai-security-${++_idCounter}`,
     prompt: aiPost
-      ? `Review this: ${aiPost.title.slice(0, 55)}`
+      ? `Review this: ${truncate(aiPost.title, 60)}`
       : `How vulnerable are agentic frameworks to indirect prompt injection?`,
     topic: "ai-security",
     topicLabel: "AI security",
@@ -353,7 +360,7 @@ function makeResearchConvo(seed: HeroSeed): Conversation {
   return {
     id: `research-${++_idCounter}`,
     prompt: post
-      ? `Research and write up: ${post.title.slice(0, 55)}`
+      ? `Research and write up: ${truncate(post.title, 55)}`
       : "Draft a briefing on this week's threat landscape",
     topic: "research",
     topicLabel: "Research",
@@ -385,7 +392,7 @@ function makeResearchConvo(seed: HeroSeed): Conversation {
       {
         type: "speech",
         text: post?.description
-          ? `${post.description.slice(0, 160)}${post.description.length > 160 ? "..." : ""}`
+          ? truncate(post.description, 160)
           : `Found ${articleCount} significant developments worth writing up. Correlating timelines and verifying technical claims against source code.`,
         typeSpeed: 22,
         pauseAfter: randInt(500, 800),
@@ -416,7 +423,7 @@ function makeResearchConvo(seed: HeroSeed): Conversation {
         type: "finding",
         icon: "shield",
         text: post
-          ? `Analysis published: "${post.title.slice(0, 50)}". PR opened with sources and technical appendix.`
+          ? `Analysis published: "${truncate(post.title, 50)}". PR opened with sources and technical appendix.`
           : `Weekly briefing drafted with ${articleCount} key findings. PR opened for editorial review.`,
         typeSpeed: 24,
         pauseAfter: 600,
@@ -443,7 +450,7 @@ function makeMalwareConvo(seed: HeroSeed): Conversation {
   return {
     id: `malware-${++_idCounter}`,
     prompt: malwareIntel
-      ? `Analyse: ${malwareIntel.title.slice(0, 55)}`
+      ? `Analyse: ${truncate(malwareIntel.title, 55)}`
       : "Reverse-engineer this suspicious binary from the honeypot",
     topic: "malware",
     topicLabel: "Malware analysis",
